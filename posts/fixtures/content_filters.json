@@ -1,0 +1,112 @@
+[
+    {
+        "model": "posts.PostWordFilter",
+        "pk": 1,
+        "fields": {
+            "word": "spam",
+            "probability": 0.95,
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostWordFilter",
+        "pk": 2,
+        "fields": {
+            "word": "scam",
+            "probability": 0.90,
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostWordFilter",
+        "pk": 3,
+        "fields": {
+            "word": "ponzi",
+            "probability": 0.85,
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostWordFilter",
+        "pk": 4,
+        "fields": {
+            "word": "guaranteed profit",
+            "probability": 0.80,
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostWordFilter",
+        "pk": 5,
+        "fields": {
+            "word": "get rich quick",
+            "probability": 0.75,
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostWordFilter",
+        "pk": 6,
+        "fields": {
+            "word": "100% return",
+            "probability": 0.70,
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostWordFilter",
+        "pk": 7,
+        "fields": {
+            "word": "risk-free",
+            "probability": 0.65,
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostWordFilter",
+        "pk": 8,
+        "fields": {
+            "word": "pump and dump",
+            "probability": 0.60,
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostWordFilter",
+        "pk": 9,
+        "fields": {
+            "word": "insider trading",
+            "probability": 0.55,
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostWordFilter",
+        "pk": 10,
+        "fields": {
+            "word": "market manipulation",
+            "probability": 0.50,
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    }
+]

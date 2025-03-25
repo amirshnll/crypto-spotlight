@@ -1,0 +1,38 @@
+[
+    {
+        "model": "posts.PostCategory",
+        "pk": 1,
+        "fields": {
+            "name": "Market Analysis",
+            "slug": "market-analysis",
+            "description": "Content related to cryptocurrency market analysis, price predictions, and trading patterns",
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostCategory",
+        "pk": 2,
+        "fields": {
+            "name": "Global",
+            "slug": "global",
+            "description": "Content covering worldwide cryptocurrency events, regulations, and market developments",
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "posts.PostCategory",
+        "pk": 3,
+        "fields": {
+            "name": "Uncategorized",
+            "slug": "uncategorized",
+            "description": "Default category for content that doesn't fit into specific categories",
+            "is_active": true,
+            "created_at": "2025-01-01T00:00:00Z",
+            "updated_at": "2025-01-01T00:00:00Z"
+        }
+    }
+]

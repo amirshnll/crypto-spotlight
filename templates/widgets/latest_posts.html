@@ -1,0 +1,45 @@
+{% if latest_posts %}
+<div class="card mb-4">
+    <div class="card-header bg-dark text-white">
+        <h5 class="mb-0">Latest Posts</h5>
+    </div>
+    <div class="card-body">
+        <ul class="list-unstyled">
+            {% for latest_post in latest_posts %}
+            <li class="mb-3">
+                <div class="row">
+                    {% if latest_post.featured_image %}
+                    <div class="col-4">
+                        <a href="{% url 'post_detail' latest_post.slug %}" class="text-dark"
+                            rel="nofollow noreferrer noopener" title="{{ latest_post.title }}">
+                            <img src="{{ latest_post.featured_image.url }}" alt="{{ latest_post.title }}"
+                                title="{{ latest_post.title }}" class="img-fluid rounded" width="100%">
+                        </a>
+                    </div>
+                    {% else %}
+                    <div class="col-4">
+                        <a href="{% url 'post_detail' latest_post.slug %}" class="text-dark"
+                            rel="nofollow noreferrer noopener" title="{{ latest_post.title }}">
+                            {% load static %}
+                            <img src="{% static '/images/default.webp' %}" alt="{{ latest_post.title }}"
+                                title="{{ latest_post.title }}" class="img-fluid rounded" width="100%">
+                        </a>
+                    </div>
+                    {% endif %}
+                    <div class="col-8">
+                        <a href="{% url 'post_detail' latest_post.slug %}" class="text-decoration-none text-dark"
+                            rel="nofollow noreferrer noopener" title="{{ latest_post.title }}">
+                            {{ latest_post.title|truncatechars:50 }}
+                            <small class="text-muted d-block">
+                                {{ latest_post.published_at|date:"M d, Y" }}
+                            </small>
+                            <small class="text-blue-600 hover:text-blue-800">Read more →</small>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div><br />
+{% endif %}

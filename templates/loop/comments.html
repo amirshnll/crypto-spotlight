@@ -1,0 +1,15 @@
+{% if comments %}
+<br />
+<h3 class="mb-3">Comments</h3>
+{% for comment in comments %}
+<div class="media mb-3 border p-3 rounded">
+    <div class="ml-4">
+        <div class="media-body">
+            <h5 class="mt-0 font-weight-bold">{{ comment.name }} Wrote:</h5>
+            <p class="mb-1">{{ comment.content }}</p>
+            <small class="text-muted">{{ comment.created_at }}</small>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
