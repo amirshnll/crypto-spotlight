@@ -1,31 +1,17 @@
-# Ignore the pitch deck file
 pitchdeck.pptx
-
-# Ignore Python bytecode files
 *.pyc
 __pycache__/
-
-# Ignore environment files
 .env
-
-# Ignore virtual environment directories
 venv/
 env/
-
-# Ignore macOS system files
 .DS_Store
-
-# Ignore log files
 *.log
-
-# Ignore temporary files
 *.tmp
 *.swp
-
-# Ignore IDE specific files
 .vscode/
 .idea/
-
-# Ignore build directories
 build/
 dist/
+media/
+media/*
+*.sqlite3
