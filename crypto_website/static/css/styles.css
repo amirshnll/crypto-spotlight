@@ -11,7 +11,11 @@
 }
 
 body {
+<<<<<<<< HEAD:crypto_website/static/css/styles.css
     font-family: 'vazir', 'Calibri Light';
+========
+    font-family: 'Calibri Light';
+>>>>>>>> 327e2ef927f95aba08073e8766695b8e0f5939c4:crypto_spotlight/static/css/styles.css
     direction: rtl
 }
 
