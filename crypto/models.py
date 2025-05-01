@@ -1,10 +1,11 @@
 from django.db import models
 from django.utils import timezone
-from crypto_spotlight.slugify import generate_unique_slug
+from crypto_website.slugify import generate_unique_slug
 
 
 class Cryptocurrency(models.Model):
     name = models.CharField(max_length=100)
+    display_name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True, blank=True, null=True, max_length=500)
     symbol = models.CharField(max_length=10)
     description = models.TextField(blank=True)

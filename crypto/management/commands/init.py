@@ -148,8 +148,8 @@ class Command(BaseCommand):
 
         # 9. Create superuser
         User = get_user_model()
-        if not User.objects.filter(username="amir").exists():
-            User.objects.create_superuser("amir", "amirsh.nll@gmail.com", "amir")
+        if not User.objects.filter(username="admin").exists():
+            User.objects.create_superuser("admin", "admin@gmail.com", "admin")
             self.stdout.write(self.style.SUCCESS("✓ Superuser created"))
 
         # 9. Move crypto/icons to media/icons
