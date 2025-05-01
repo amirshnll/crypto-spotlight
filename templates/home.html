@@ -1,38 +1,38 @@
 {% extends 'base.html' %}
 
-{% block title %}Home - {{ WEBSITE_NAME }}{% endblock %}
+{% block title %}صفحه اصلی - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block meta_keywords %}cryptocurrency news, crypto market news, digital currency news, {{ WEBSITE_NAME }}, latest
-crypto news{% endblock %}
+{% block meta_keywords %}اخبار ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز دیجیتال، {{ WEBSITE_NAME }}، آخرین
+اخبار ارزهای دیجیتال{% endblock %}
 
-{% block meta_description %}Get latest cryptocurrency news and market news at {{ WEBSITE_NAME }}. up-to-the-minute
-reports, analysis, and in-depth coverage of the digital currency market.{% endblock %}
+{% block meta_description %}آخرین اخبار ارزهای دیجیتال و اخبار بازار را در {{ WEBSITE_NAME }} دریافت کنید. گزارش‌های
+لحظه‌ای، تحلیل و پوشش عمیق بازار ارزهای دیجیتال.{% endblock %}
 
-{% block og_title %}Home - {{ WEBSITE_NAME }}{% endblock %}
+{% block og_title %}صفحه اصلی - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block og_description %}Get latest cryptocurrency news and market news at {{ WEBSITE_NAME }}. up-to-the-minute
-reports, analysis, and in-depth coverage of the digital currency market.{% endblock %}
+{% block og_description %}آخرین اخبار ارزهای دیجیتال و اخبار بازار را در {{ WEBSITE_NAME }} دریافت کنید. گزارش‌های
+لحظه‌ای، تحلیل و پوشش عمیق بازار ارزهای دیجیتال.{% endblock %}
 
-{% block dc_title %}Home - {{ WEBSITE_NAME }}{% endblock %}
+{% block dc_title %}صفحه اصلی - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block dc_keywords %}cryptocurrency news, crypto market news, digital currency news, {{ WEBSITE_NAME }}, latest
-crypto news{% endblock %}
+{% block dc_keywords %}اخبار ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز دیجیتال، {{ WEBSITE_NAME }}، آخرین
+اخبار ارزهای دیجیتال{% endblock %}
 
-{% block dc_description %}Get latest cryptocurrency news and market news at {{ WEBSITE_NAME }}. up-to-the-minute
-reports, analysis, and in-depth coverage of the digital currency market.{% endblock %}
+{% block dc_description %}آخرین اخبار ارزهای دیجیتال و اخبار بازار را در {{ WEBSITE_NAME }} دریافت کنید. گزارش‌های
+لحظه‌ای، تحلیل و پوشش عمیق بازار ارزهای دیجیتال.{% endblock %}
 
-{% block twitter_title %}Home - {{ WEBSITE_NAME }}{% endblock %}
+{% block twitter_title %}صفحه اصلی - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block twitter_description %}Get latest cryptocurrency news and market news at {{ WEBSITE_NAME }}. up-to-the-minute
-reports, analysis, and in-depth coverage of the digital currency market.{% endblock %}
+{% block twitter_description %}آخرین اخبار ارزهای دیجیتال و اخبار بازار را در {{ WEBSITE_NAME }} دریافت کنید. گزارش‌های
+لحظه‌ای، تحلیل و پوشش عمیق بازار ارزهای دیجیتال.{% endblock %}
 
 {% block extra_json_ld %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "{{ WEBSITE_NAME }} - Cryptocurrency News and Market Analysis",
-  "description": "Get latest cryptocurrency news and market news at {{ WEBSITE_NAME }}. up-to-the-minute reports, analysis, and in-depth coverage of the digital currency market.",
+  "name": "{{ WEBSITE_NAME }} - اخبار و تحلیل بازار ارزهای دیجیتال",
+  "description": "آخرین اخبار ارزهای دیجیتال و اخبار بازار را در {{ WEBSITE_NAME }} دریافت کنید. گزارش‌های لحظه‌ای، تحلیل و پوشش عمیق بازار ارزهای دیجیتال.",
   "publisher": {
     "@type": "Organization",
     "name": "{{ WEBSITE_NAME }}",
@@ -75,12 +75,12 @@ reports, analysis, and in-depth coverage of the digital currency market.{% endbl
                                 <small>
                                     <i class="far fa-calendar-alt"></i> {{ post.published_at|date:"F d, Y" }}
                                     &nbsp;
-                                    <i class="fas fa-eye"></i> {{ post.views_count }} views
+                                    <i class="fas fa-eye"></i> {{ post.views_count }} بازدید
                                 </small>
                             </p>
                             <a href="{% url 'post_detail' post.slug %}"
-                                class="text-blue-600 hover:text-blue-800 text-decoration-none">Read more
-                                →</a>
+                                class="text-blue-600 hover:text-blue-800 text-decoration-none">ادامه مطلب
+                                ←</a>
                         </div>
                     </a>
                 </div>

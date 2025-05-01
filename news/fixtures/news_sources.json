@@ -3,7 +3,7 @@
     "model": "news.newssource",
     "pk": 1,
     "fields": {
-      "name": "CoinDesk",
+      "name": "سایت CoinDesk",
       "website_url": "https://www.coindesk.com",
       "feed_url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
       "is_active": true,
@@ -25,7 +25,7 @@
     "model": "news.newssource",
     "pk": 2,
     "fields": {
-      "name": "CryptoSlate",
+      "name": "سایت CryptoSlate",
       "website_url": "https://cryptoslate.com",
       "feed_url": "https://cryptoslate.com/feed/",
       "is_active": true,
@@ -47,7 +47,7 @@
     "model": "news.newssource",
     "pk": 3,
     "fields": {
-      "name": "Cointelegraph",
+      "name": "سایت Cointelegraph",
       "website_url": "https://cointelegraph.com",
       "feed_url": "https://cointelegraph.com/rss",
       "is_active": true,
@@ -69,7 +69,7 @@
     "model": "news.newssource",
     "pk": 4,
     "fields": {
-      "name": "Bitcoin.com News",
+      "name": "سایت Bitcoin.com News",
       "website_url": "https://news.bitcoin.com",
       "feed_url": "https://news.bitcoin.com/feed/",
       "is_active": true,
@@ -89,7 +89,7 @@
     "model": "news.newssource",
     "pk": 5,
     "fields": {
-      "name": "The Block",
+      "name": "سایت The Block",
       "website_url": "https://www.theblock.co",
       "feed_url": "https://www.theblock.co/rss.xml",
       "is_active": true,
@@ -109,7 +109,7 @@
     "model": "news.newssource",
     "pk": 6,
     "fields": {
-      "name": "Decrypt",
+      "name": "سایت Decrypt",
       "website_url": "https://decrypt.co",
       "feed_url": "https://decrypt.co/feed",
       "is_active": true,
@@ -130,7 +130,7 @@
     "model": "news.newssource",
     "pk": 7,
     "fields": {
-      "name": "BeInCrypto",
+      "name": "سایت BeInCrypto",
       "website_url": "https://beincrypto.com",
       "feed_url": "https://beincrypto.com/feed",
       "is_active": true,
@@ -151,7 +151,7 @@
     "model": "news.newssource",
     "pk": 8,
     "fields": {
-      "name": "Blockworks",
+      "name": "سایت Blockworks",
       "website_url": "https://blockworks.co",
       "feed_url": "https://blockworks.co/feed",
       "is_active": true,
@@ -172,7 +172,7 @@
     "model": "news.newssource",
     "pk": 9,
     "fields": {
-      "name": "CryptoNews",
+      "name": "سایت CryptoNews",
       "website_url": "https://cryptonews.com",
       "feed_url": "https://cryptonews.com/news/feed",
       "is_active": true,
@@ -193,7 +193,7 @@
     "model": "news.newssource",
     "pk": 10,
     "fields": {
-      "name": "Bitcoinist",
+      "name": "سایت Bitcoinist",
       "website_url": "https://bitcoinist.com",
       "feed_url": "https://bitcoinist.com/feed",
       "is_active": true,
@@ -214,7 +214,7 @@
     "model": "news.newssource",
     "pk": 11,
     "fields": {
-      "name": "NewsBTC",
+      "name": "سایت NewsBTC",
       "website_url": "https://www.newsbtc.com",
       "feed_url": "https://www.newsbtc.com/feed",
       "is_active": true,
@@ -235,7 +235,7 @@
     "model": "news.newssource",
     "pk": 12,
     "fields": {
-      "name": "Crypto Briefing",
+      "name": "سایت Crypto Briefing",
       "website_url": "https://cryptobriefing.com",
       "feed_url": "https://cryptobriefing.com/feed",
       "is_active": true,
@@ -256,7 +256,7 @@
     "model": "news.newssource",
     "pk": 13,
     "fields": {
-      "name": "Protos",
+      "name": "سایت Protos",
       "website_url": "https://protos.com",
       "feed_url": "https://protos.com/feed",
       "is_active": true,
@@ -277,7 +277,7 @@
     "model": "news.newssource",
     "pk": 14,
     "fields": {
-      "name": "Crypto Daily",
+      "name": "سایت Crypto Daily",
       "website_url": "https://cryptodaily.co.uk",
       "feed_url": "https://cryptodaily.co.uk/feed",
       "is_active": true,
@@ -298,7 +298,7 @@
     "model": "news.newssource",
     "pk": 15,
     "fields": {
-      "name": "Coin Journal",
+      "name": "سایت Coin Journal",
       "website_url": "https://coinjournal.net",
       "feed_url": "https://coinjournal.net/feed",
       "is_active": true,
@@ -319,7 +319,7 @@
     "model": "news.newssource",
     "pk": 16,
     "fields": {
-      "name": "AMBCrypto",
+      "name": "سایت AMBCrypto",
       "website_url": "https://ambcrypto.com",
       "feed_url": "https://ambcrypto.com/feed",
       "is_active": true,
@@ -340,7 +340,7 @@
     "model": "news.newssource",
     "pk": 17,
     "fields": {
-      "name": "U.Today",
+      "name": "سایت U.Today",
       "website_url": "https://u.today",
       "feed_url": "https://u.today/rss",
       "is_active": true,
@@ -361,7 +361,7 @@
     "model": "news.newssource",
     "pk": 18,
     "fields": {
-      "name": "Crypto Potato",
+      "name": "سایت Crypto Potato",
       "website_url": "https://cryptopotato.com",
       "feed_url": "https://cryptopotato.com/feed",
       "is_active": true,
@@ -382,7 +382,7 @@
     "model": "news.newssource",
     "pk": 19,
     "fields": {
-      "name": "Bitcoin Magazine",
+      "name": "سایت Bitcoin Magazine",
       "website_url": "https://bitcoinmagazine.com",
       "feed_url": "https://bitcoinmagazine.com/feed",
       "is_active": true,
@@ -403,7 +403,7 @@
     "model": "news.newssource",
     "pk": 20,
     "fields": {
-      "name": "DailyCoin",
+      "name": "سایت DailyCoin",
       "website_url": "https://dailycoin.com",
       "feed_url": "https://dailycoin.com/feed",
       "is_active": true,

@@ -6,7 +6,8 @@
 }
 
 body {
-    font-family: 'Calibri Light'
+    font-family: 'Calibri Light';
+    direction: rtl
 }
 
 p {

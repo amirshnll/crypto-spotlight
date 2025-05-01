@@ -1,37 +1,31 @@
 {% extends "base.html" %}
 
-{% block title %}About Us - {{ WEBSITE_NAME }}{% endblock %}
+{% block title %}درباره ما - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block meta_keywords %}Cryptocurrency News, Digital Asset Analysis, Blockchain Technology, {{ WEBSITE_NAME }}, Crypto
-Education, Market Insights{% endblock %}
+{% block meta_keywords %}اخبار ارزهای دیجیتال، تحلیل دارایی‌های دیجیتال، فناوری بلاکچین، {{ WEBSITE_NAME }}، آموزش ارزهای دیجیتال، بینش‌های بازار{% endblock %}
 
-{% block meta_description %}Find {{ WEBSITE_NAME }}, your trusted source of cryptocurrency news, analysis, and insights.
-We provide accurate, timely reporting and educational content on the world of digital assets.{% endblock %}
+{% block meta_description %}{{ WEBSITE_NAME }} را بشناسید، منبع مورد اعتماد شما برای اخبار، تحلیل و بینش‌های ارزهای دیجیتال. ما گزارش‌های دقیق، به موقع و محتوای آموزشی در دنیای دارایی‌های دیجیتال ارائه می‌دهیم.{% endblock %}
 
-{% block og_title %}About Us - {{ WEBSITE_NAME }}{% endblock %}
+{% block og_title %}درباره ما - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block og_description %}Find {{ WEBSITE_NAME }}, your trusted source of cryptocurrency news, analysis, and insights.
-We provide accurate, timely reporting and educational content on the world of digital assets.
+{% block og_description %}{{ WEBSITE_NAME }} را بشناسید، منبع مورد اعتماد شما برای اخبار، تحلیل و بینش‌های ارزهای دیجیتال. ما گزارش‌های دقیق، به موقع و محتوای آموزشی در دنیای دارایی‌های دیجیتال ارائه می‌دهیم.
 {% endblock %}
 
-{% block dc_title %}About Us - {{ WEBSITE_NAME }}{% endblock %}
+{% block dc_title %}درباره ما - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block dc_keywords %}Cryptocurrency News, Digital Assets, Blockchain Technology, {{ WEBSITE_NAME }}, Crypto Education,
-Market Analysis, Crypto Insights{% endblock %}
+{% block dc_keywords %}اخبار ارزهای دیجیتال، دارایی‌های دیجیتال، فناوری بلاکچین، {{ WEBSITE_NAME }}، آموزش ارزهای دیجیتال، تحلیل بازار، بینش‌های ارزهای دیجیتال{% endblock %}
 
-{% block dc_description %}Find {{ WEBSITE_NAME }}, your trusted source of cryptocurrency news, analysis, and insights.
-We provide accurate, timely reporting and educational content on the world of digital assets.{% endblock %}
+{% block dc_description %}{{ WEBSITE_NAME }} را بشناسید، منبع مورد اعتماد شما برای اخبار، تحلیل و بینش‌های ارزهای دیجیتال. ما گزارش‌های دقیق، به موقع و محتوای آموزشی در دنیای دارایی‌های دیجیتال ارائه می‌دهیم.{% endblock %}
 
-{% block twitter_title %}About Us - {{ WEBSITE_NAME }}{% endblock %}
+{% block twitter_title %}درباره ما - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block twitter_description %}Find {{ WEBSITE_NAME }}, your trusted source of cryptocurrency news, analysis, and
-insights. We provide accurate, timely reporting and educational content on the world of digital assets.{% endblock %}
+{% block twitter_description %}{{ WEBSITE_NAME }} را بشناسید، منبع مورد اعتماد شما برای اخبار، تحلیل و بینش‌های ارزهای دیجیتال. ما گزارش‌های دقیق، به موقع و محتوای آموزشی در دنیای دارایی‌های دیجیتال ارائه می‌دهیم.{% endblock %}
 
 {% block breadcrumb_items %},
 {
 "@type": "ListItem",
 "position": 2,
-"name": "About Us",
+"name": "درباره ما",
 "item": "{{ request.scheme }}://{{ request.get_host }}{% url 'about' %}"
 }
 {% endblock %}
@@ -41,9 +35,8 @@ insights. We provide accurate, timely reporting and educational content on the w
 {
 "@context": "https://schema.org",
 "@type": "WebPage",
-"name": "About Us - {{ WEBSITE_NAME }}",
-"description": "Find {{ WEBSITE_NAME }}, your trusted source of cryptocurrency news, analysis, and insights. We provide
-accurate, timely reporting and educational content on the world of digital assets.",
+"name": "درباره ما - {{ WEBSITE_NAME }}",
+"description": "{{ WEBSITE_NAME }} را بشناسید، منبع مورد اعتماد شما برای اخبار، تحلیل و بینش‌های ارزهای دیجیتال. ما گزارش‌های دقیق، به موقع و محتوای آموزشی در دنیای دارایی‌های دیجیتال ارائه می‌دهیم.",
 "publisher": {
 "@type": "Organization",
 "name": "{{ WEBSITE_NAME }}",
@@ -60,11 +53,10 @@ accurate, timely reporting and educational content on the world of digital asset
 {% block content %}
 
 <div class="container py-5">
-    <h1 class="display-4 text-center mb-4">About Us</h1>
+    <h1 class="display-4 text-center mb-4">درباره ما</h1>
     <p class="text-muted text-center">
         <small>
-            Welcome to {{ WEBSITE_NAME }}, your one-stop source of cryptocurrency news, analysis, and insights. We are
-            dedicated to providing accurate, timely, and insightful reporting on the world of cryptocurrency.
+            به {{ WEBSITE_NAME }} خوش آمدید، منبع جامع اخبار، تحلیل و بینش‌های ارزهای دیجیتال. ما متعهد به ارائه گزارش‌های دقیق، به موقع و عمیق در دنیای ارزهای دیجیتال هستیم.
         </small>
     </p>
 </div>
@@ -74,13 +66,11 @@ accurate, timely reporting and educational content on the world of digital asset
         <div class="col-md-4 mb-4">
             <div class="card h-100">
                 <div class="card-header">
-                    <h3 class="text-2xl font-semibold mb-2">Our Mission</h3>
+                    <h3 class="text-2xl font-semibold mb-2">ماموریت ما</h3>
                 </div>
                 <div class="card-body">
                     <p>
-                        Our mission is to empower individuals with knowledge and insight into the world of
-                        cryptocurrency,
-                        making informed decisions in this rapidly evolving digital asset world.
+                        ماموریت ما توانمندسازی افراد با دانش و بینش در دنیای ارزهای دیجیتال است، تا بتوانند در این دنیای دارایی‌های دیجیتال که به سرعت در حال تکامل است، تصمیمات آگاهانه‌ای بگیرند.
                     </p>
                 </div>
             </div>
@@ -89,15 +79,14 @@ accurate, timely reporting and educational content on the world of digital asset
         <div class="col-md-4 mb-4">
             <div class="card h-100">
                 <div class="card-header">
-                    <h3 class="text-2xl font-semibold mb-2">What We Do?</h3>
+                    <h3 class="text-2xl font-semibold mb-2">ما چه کاری انجام می‌دهیم؟</h3>
                 </div>
                 <div class="card-body">
                     <ul class="list-disc">
-                        <li class="mb-2">Present current cryptocurrency news and market updates.</li>
-                        <li class="mb-2">Provide deep insights into blockchain technology and new developments.</li>
-                        <li class="mb-2">Follow and analyze trends in the markets and the performance of
-                            cryptocurrencies.</li>
-                        <li class="mb-2">Develop educational pieces for both rookies and veteran traders.</li>
+                        <li class="mb-2">ارائه اخبار به روز ارزهای دیجیتال و به‌روزرسانی‌های بازار.</li>
+                        <li class="mb-2">ارائه بینش‌های عمیق در مورد فناوری بلاکچین و پیشرفت‌های جدید.</li>
+                        <li class="mb-2">پیگیری و تحلیل روندها در بازارها و عملکرد ارزهای دیجیتال.</li>
+                        <li class="mb-2">تهیه مطالب آموزشی برای هر دو گروه تازه‌کاران و معامله‌گران با تجربه.</li>
                     </ul>
                 </div>
             </div>
@@ -106,18 +95,14 @@ accurate, timely reporting and educational content on the world of digital asset
         <div class="col-md-4 mb-4">
             <div class="card h-100">
                 <div class="card-header">
-                    <h3 class="text-2xl font-semibold mb-2">Our Values</h3>
+                    <h3 class="text-2xl font-semibold mb-2">ارزش‌های ما</h3>
                 </div>
                 <div class="card-body">
                     <ul class="list-disc">
-                        <li class="mb-2"><strong>Accuracy:</strong> We ensure our readers are getting accurate and
-                            checked information.</li>
-                        <li class="mb-2"><strong>Transparency:</strong> We practice full openness in our reportage and
-                            analysis.</li>
-                        <li class="mb-2"><strong>Education:</strong> We concentrate on educating our readers on the
-                            crypto ecosystem.</li>
-                        <li class="mb-2"><strong>Innovation:</strong> We continue to be at the forefront of
-                            cryptocurrency and blockchain innovation.</li>
+                        <li class="mb-2"><strong>دقت:</strong> ما اطمینان حاصل می‌کنیم که خوانندگان ما اطلاعات دقیق و بررسی شده دریافت می‌کنند.</li>
+                        <li class="mb-2"><strong>شفافیت:</strong> ما در گزارش‌ها و تحلیل‌های خود کاملاً شفاف عمل می‌کنیم.</li>
+                        <li class="mb-2"><strong>آموزش:</strong> ما بر آموزش خوانندگان خود در مورد اکوسیستم ارزهای دیجیتال تمرکز داریم.</li>
+                        <li class="mb-2"><strong>نوآوری:</strong> ما همچنان در خط مقدم نوآوری در زمینه ارزهای دیجیتال و بلاکچین هستیم.</li>
                     </ul>
                 </div>
             </div>

@@ -1,36 +1,36 @@
 {% extends 'base.html' %}
 
-{% block title %}Live Prices - {{ WEBSITE_NAME }}{% endblock %}
+{% block title %}قیمت‌های زنده - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block meta_keywords %}live prices of cryptocurrencies, crypto market statistics, live crypto prices,
-{{ WEBSITE_NAME }}, prices of digital currencies{% endblock %}
+{% block meta_keywords %}قیمت‌های زنده ارزهای دیجیتال، آمار بازار ارزهای دیجیتال، قیمت‌های زنده ارزهای دیجیتال،
+{{ WEBSITE_NAME }}، قیمت‌های ارزهای دیجیتال{% endblock %}
 
-{% block meta_description %}Get live crypto prices and market stats at {{ WEBSITE_NAME }}. Stay updated with
-up-to-the-minute charts and price action of major digital currencies.{% endblock %}
+{% block meta_description %}قیمت‌های زنده ارزهای دیجیتال و آمار بازار را در {{ WEBSITE_NAME }} دریافت کنید. با
+نمودارهای لحظه‌ای و تغییرات قیمت ارزهای دیجیتال اصلی به‌روز بمانید.{% endblock %}
 
-{% block og_title %}Live Prices - {{ WEBSITE_NAME }}{% endblock %}
+{% block og_title %}قیمت‌های زنده - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block og_description %}Get live crypto prices and market stats at {{ WEBSITE_NAME }}. Stay updated with
-up-to-the-minute charts and price action of major digital currencies.{% endblock %}
+{% block og_description %}قیمت‌های زنده ارزهای دیجیتال و آمار بازار را در {{ WEBSITE_NAME }} دریافت کنید. با
+نمودارهای لحظه‌ای و تغییرات قیمت ارزهای دیجیتال اصلی به‌روز بمانید.{% endblock %}
 
-{% block dc_title %}Live Prices - {{ WEBSITE_NAME }}{% endblock %}
+{% block dc_title %}قیمت‌های زنده - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block dc_keywords %}live prices of cryptocurrencies, crypto market statistics, live crypto prices,
-{{ WEBSITE_NAME }}, prices of digital currencies{% endblock %}
+{% block dc_keywords %}قیمت‌های زنده ارزهای دیجیتال، آمار بازار ارزهای دیجیتال، قیمت‌های زنده ارزهای دیجیتال،
+{{ WEBSITE_NAME }}، قیمت‌های ارزهای دیجیتال{% endblock %}
 
-{% block dc_description %}Get live crypto prices and market stats at {{ WEBSITE_NAME }}. Stay updated with
-up-to-the-minute charts and price action of major digital currencies.{% endblock %}
+{% block dc_description %}قیمت‌های زنده ارزهای دیجیتال و آمار بازار را در {{ WEBSITE_NAME }} دریافت کنید. با
+نمودارهای لحظه‌ای و تغییرات قیمت ارزهای دیجیتال اصلی به‌روز بمانید.{% endblock %}
 
-{% block twitter_title %}Live Prices - {{ WEBSITE_NAME }}{% endblock %}
+{% block twitter_title %}قیمت‌های زنده - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block twitter_description %}Get live crypto prices and market stats at {{ WEBSITE_NAME }}. Stay updated with
-up-to-the-minute charts and price action of major digital currencies.{% endblock %}
+{% block twitter_description %}قیمت‌های زنده ارزهای دیجیتال و آمار بازار را در {{ WEBSITE_NAME }} دریافت کنید. با
+نمودارهای لحظه‌ای و تغییرات قیمت ارزهای دیجیتال اصلی به‌روز بمانید.{% endblock %}
 
 {% block breadcrumb_items %},
 {
 "@type": "ListItem",
 "position": 2,
-"name": "Live Prices",
+"name": "قیمت‌های زنده",
 "item": "{{ request.scheme }}://{{ request.get_host }}{% url 'live' %}"
 }
 {% endblock %}
@@ -40,8 +40,8 @@ up-to-the-minute charts and price action of major digital currencies.{% endblock
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Live Cryptocurrency Prices - {{ WEBSITE_NAME }}",
-  "description": "Get live crypto prices and market stats at {{ WEBSITE_NAME }}. Stay updated with up-to-the-minute charts and price action of major digital currencies.",
+  "name": "قیمت‌های زنده ارزهای دیجیتال - {{ WEBSITE_NAME }}",
+  "description": "قیمت‌های زنده ارزهای دیجیتال و آمار بازار را در {{ WEBSITE_NAME }} دریافت کنید. با نمودارهای لحظه‌ای و تغییرات قیمت ارزهای دیجیتال اصلی به‌روز بمانید.",
   "publisher": {
     "@type": "Organization",
     "name": "{{ WEBSITE_NAME }}",
@@ -52,8 +52,8 @@ up-to-the-minute charts and price action of major digital currencies.{% endblock
   },
   "mainEntity": {
     "@type": "Dataset",
-    "name": "Live Cryptocurrency Price Data",
-    "description": "Real-time price charts and market data for major cryptocurrencies",
+    "name": "داده‌های قیمت زنده ارزهای دیجیتال",
+    "description": "نمودارهای قیمت لحظه‌ای و داده‌های بازار برای ارزهای دیجیتال اصلی",
     "temporalCoverage": "{{ prices.0.labels.0 }}/{{ prices.0.labels|last }}"
   },
   "url": "{{ request.scheme }}://{{ request.get_host }}{% url 'live' %}"
@@ -74,7 +74,7 @@ up-to-the-minute charts and price action of major digital currencies.{% endblock
                 <img src="{{ price.icon.url }}" alt="{{ price.name }}" width="15" height="15"
                     style="vertical-align: middle;">
                 {% endif %}
-                Live Price Chart of {{ price.name }} ({{ price.symbol }})
+                نمودار قیمت زنده {{ price.display_name }} ({{ price.symbol }})
             </h4>
         </a>
         <canvas id="priceChart-{{ price.id }}" width="400" height="200"></canvas>
@@ -94,7 +94,7 @@ up-to-the-minute charts and price action of major digital currencies.{% endblock
         data: {
             labels: {{ price.labels | safe }},
         datasets: [{
-            label: 'Price in USD',
+            label: 'قیمت به دلار',
             data: {{ price.prices | safe }},
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1

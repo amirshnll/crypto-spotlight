@@ -1,42 +1,30 @@
 {% extends 'base.html' %}
 
-{% block title %}Technical Whitepaper - {{ WEBSITE_NAME }}{% endblock %}
+{% block title %}وایت‌پیپر - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block meta_keywords %}cryptocurrency platform, technical whitepaper, crypto news analysis, AI-powered analysis,
-Django web application, cryptocurrency data platform, real-time crypto news, market analysis platform, cryptocurrency
-architecture, blockchain technology{% endblock %}
+{% block meta_keywords %}وایت‌پیپر، اخبار ارزهای دیجیتال، تحلیل ارزهای دیجیتال، دارایی‌های دیجیتال، اخبار بلاکچین، بینش‌های ارزهای دیجیتال، آموزش ارزهای دیجیتال، به‌روزرسانی‌های ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز دیجیتال{% endblock %}
 
-{% block meta_description %}Comprehensive technical documentation detailing the architecture and features of our
-cryptocurrency information platform. Learn about our real-time data processing, AI-powered market analysis, and scalable
-system design for delivering cryptocurrency news and insights.{% endblock %}
+{% block meta_description %}وایت‌پیپر {{ WEBSITE_NAME }} - مستندات فنی پلتفرم ما. اطلاعات دقیق در مورد معماری، مدل‌های داده، تولید متن هوش مصنوعی و جمع‌آوری داده‌ها.{% endblock %}
 
-{% block og_title %}Technical Whitepaper - {{ WEBSITE_NAME }}{% endblock %}
+{% block og_title %}وایت‌پیپر - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block og_description %}Comprehensive technical documentation detailing the architecture and features of our
-cryptocurrency information platform. Learn about our real-time data processing, AI-powered market analysis, and scalable
-system design for delivering cryptocurrency news and insights.{% endblock %}
+{% block og_description %}وایت‌پیپر {{ WEBSITE_NAME }} - مستندات فنی پلتفرم ما. اطلاعات دقیق در مورد معماری، مدل‌های داده، تولید متن هوش مصنوعی و جمع‌آوری داده‌ها.{% endblock %}
 
-{% block dc_title %}Technical Whitepaper - {{ WEBSITE_NAME }}{% endblock %}
+{% block dc_title %}وایت‌پیپر - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block dc_keywords %}cryptocurrency platform, technical whitepaper, crypto news analysis, AI-powered analysis,
-Django web application, cryptocurrency data platform, real-time crypto news, market analysis platform, cryptocurrency
-architecture, blockchain technology{% endblock %}
+{% block dc_keywords %}وایت‌پیپر، اخبار ارزهای دیجیتال، تحلیل ارزهای دیجیتال، دارایی‌های دیجیتال، اخبار بلاکچین، بینش‌های ارزهای دیجیتال، آموزش ارزهای دیجیتال، به‌روزرسانی‌های ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز دیجیتال{% endblock %}
 
-{% block dc_description %}Comprehensive technical documentation detailing the architecture and features of our
-cryptocurrency information platform. Learn about our real-time data processing, AI-powered market analysis, and scalable
-system design for delivering cryptocurrency news and insights.{% endblock %}
+{% block dc_description %}وایت‌پیپر {{ WEBSITE_NAME }} - مستندات فنی پلتفرم ما. اطلاعات دقیق در مورد معماری، مدل‌های داده، تولید متن هوش مصنوعی و جمع‌آوری داده‌ها.{% endblock %}
 
-{% block twitter_title %}Technical Whitepaper - {{ WEBSITE_NAME }}{% endblock %}
+{% block twitter_title %}وایت‌پیپر - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block twitter_description %}Comprehensive technical documentation detailing the architecture and features of our
-cryptocurrency information platform. Learn about our real-time data processing, AI-powered market analysis, and scalable
-system design for delivering cryptocurrency news and insights.{% endblock %}
+{% block twitter_description %}وایت‌پیپر {{ WEBSITE_NAME }} - مستندات فنی پلتفرم ما. اطلاعات دقیق در مورد معماری، مدل‌های داده، تولید متن هوش مصنوعی و جمع‌آوری داده‌ها.{% endblock %}
 
 {% block breadcrumb_items %},
 {
 "@type": "ListItem",
 "position": 2,
-"name": "Whitepaper",
+"name": "وایت‌پیپر",
 "item": "{{ request.scheme }}://{{ request.get_host }}{% url 'whitepaper' %}"
 }
 {% endblock %}
@@ -45,9 +33,9 @@ system design for delivering cryptocurrency news and insights.{% endblock %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TechnicalArticle",
-  "headline": "{{ WEBSITE_NAME }} Technical Whitepaper",
-  "description": "Comprehensive technical documentation detailing the architecture and features of our cryptocurrency information platform. Learn about our real-time data processing, AI-powered market analysis, and scalable system design for delivering cryptocurrency news and insights.",
+  "@type": "TechArticle",
+  "headline": "وایت‌پیپر {{ WEBSITE_NAME }}",
+  "description": "وایت‌پیپر {{ WEBSITE_NAME }} - مستندات فنی پلتفرم ما. اطلاعات دقیق در مورد معماری، مدل‌های داده، تولید متن هوش مصنوعی و جمع‌آوری داده‌ها.",
   "author": {
     "@type": "Organization",
     "name": "{{ WEBSITE_NAME }}"
@@ -60,317 +48,273 @@ system design for delivering cryptocurrency news and insights.{% endblock %}
       "url": "{{ request.scheme }}://{{ request.get_host }}{% load static %}{% static 'images/meta.jpg' %}"
     }
   },
-  "datePublished": "{% now 'c' %}",
-  "dateModified": "{% now 'c' %}",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ request.scheme }}://{{ request.get_host }}{% url 'whitepaper' %}"
-  },
-  "technicalPlatform": "Django Web Framework",
-  "dependencies": "Python, Django, Bootstrap, Chart.js"
+  }
 }
 </script>
 {% endblock %}
 
-
 {% block content %}
-<div class="container whitepaper">
-    <h1 class="text-center">{{ WEBSITE_NAME }} Technical Whitepaper</h1>
-    <p class="text-muted text-center">Your go-to place for real-time news and analysis on the world of
-        cryptocurrencies.</p>
-    <br />
+<div class="container py-5">
+    <h1 class="display-4 text-center mb-4">وایت‌پیپر {{ WEBSITE_NAME }}</h1>
+    <p class="text-muted text-center">
+        <small>
+            مستندات فنی پلتفرم ما. اطلاعات دقیق در مورد معماری، مدل‌های داده، تولید متن هوش مصنوعی و جمع‌آوری داده‌ها.
+        </small>
+    </p>
+</div>
 
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">1. Project Overview</h2>
-                    <p>{{ WEBSITE_NAME }} is a comprehensive cryptocurrency information platform that provides real-time
-                        data, news, and AI-based analysis for cryptocurrency markets. {{ WEBSITE_NAME }} gathers live
-                        cryptocurrency price information and news from trustworthy sources and subsequently uses
-                        advanced language models to develop insightful analysis and summaries for consumers.</p>
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">1. مقدمه</h2>
 
-                    <p>The platform will serve both rookie and experienced cryptocurrency players alike by offering:</p>
-                    <ul>
-                        <li>Real-time cryptocurrency price tracking.</li>
-                        <li>AI-powered market analysis (hourly, daily, and monthly).</li>
-                        <li>Gathered news from trusted sources.</li>
-                        <li>Detailed cryptocurrency data and resources.</li>
-                    </ul>
-                </div>
+                <h3>1.1 هدف</h3>
+                <p>{{ WEBSITE_NAME }} یک پلتفرم تحلیل بازار ارزهای دیجیتال است که از هوش مصنوعی برای تولید محتوای با کیفیت بالا استفاده می‌کند. این وایت‌پیپر معماری فنی، مدل‌های داده و فرآیندهای تولید محتوا را توضیح می‌دهد.</p>
+
+                <h3>1.2 مشکلی که حل می‌کنیم</h3>
+                <p>بازار ارزهای دیجیتال با چالش‌های زیر روبرو است:</p>
+                <ul>
+                    <li>حجم زیاد اطلاعات پراکنده و غیرساختاری.</li>
+                    <li>کمبود تحلیل‌های به‌موقع و قابل اعتماد.</li>
+                    <li>دشواری در پیگیری روندهای بازار در میان منابع خبری متعدد.</li>
+                </ul>
+
+                <h3>1.3 راه‌حل ما</h3>
+                <p>{{ WEBSITE_NAME }} این مشکلات را با موارد زیر حل می‌کند:</p>
+                <ul>
+                    <li>جمع‌آوری خودکار داده‌های قیمت و اخبار از منابع معتبر.</li>
+                    <li>استفاده از هوش مصنوعی برای تولید تحلیل‌های بازار با کیفیت بالا.</li>
+                    <li>ارائه یک رابط کاربری یکپارچه برای دسترسی به اطلاعات بازار و تحلیل‌ها.</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">2. Technical Architecture</h2>
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">2. معماری سیستم</h2>
 
-                    <h3>2.1 Technology Stack</h3>
-                    <p>{{ WEBSITE_NAME }} is built with the help of the following technologies:</p>
-                    <ul>
-                        <li><strong>Backend Framework:</strong> Django 5.1.7 (Python-based web framework).</li>
-                        <li><strong>Database:</strong> SQLite (development), with scalability to scale to PostgreSQL.
-                        </li>
-                        <li><strong>Frontend:</strong> HTML5, CSS3, Bootstrap 5.3, JavaScript, Chart.js.</li>
-                        <li><strong>AI Text Generation:</strong> {{ MODEL_NAME }} (Large Language Model).</li>
-                        <li><strong>Data Processing:</strong> Python with scikit-learn 1.6.1.</li>
-                        <li><strong>API Integration:</strong> Requests 2.32.3.</li>
-                        <li><strong>Content Parsing:</strong> BeautifulSoup4 4.13.3.</li>
-                        <li><strong>Content Formatting:</strong> Markdown 3.7.</li>
-                    </ul>
+                <h3>2.1 نمای کلی</h3>
+                <p>{{ WEBSITE_NAME }} از یک معماری چندلایه استفاده می‌کند که شامل موارد زیر است:</p>
+                <ul>
+                    <li><strong>لایه داده:</strong> ذخیره‌سازی و مدیریت داده‌های ارزهای دیجیتال و اخبار.</li>
+                    <li><strong>لایه منطق کسب و کار:</strong> پردازش داده‌ها و تولید محتوا.</li>
+                    <li><strong>لایه ارائه:</strong> رابط کاربری وب برای نمایش محتوا به کاربران.</li>
+                </ul>
 
-                    <h3>2.2 System Architecture</h3>
-                    <p>The application has a modular Django setup with the following main components:</p>
-                    <ul>
-                        <li><strong>Crypto Module:</strong> Handles cryptocurrency data, price tracking, and historical
-                            data with support for SVG icons.</li>
-                        <li><strong>News Module:</strong> Handles news aggregation, news classification, and news
-                            storage with configurable fetch frequencies.</li>
-                        <li><strong>Posts Module:</strong> Records AI-generated analysis posts with additional features
-                            like view tracking, level of engagement, and QR code inclusion.</li>
-                        <li><strong>Contact Module:</strong> Handles user queries and feedback management.</li>
-                        <li><strong>Text Generation Service:</strong> Interacts with LLM APIs to generate market
-                            analysis.</li>
-                    </ul>
+                <h3>2.2 اجزای اصلی</h3>
+                <p>سیستم از اجزای زیر تشکیل شده است:</p>
+                <ul>
+                    <li><strong>جمع‌کننده داده‌های قیمت:</strong> قیمت‌های ارزهای دیجیتال را از منابع معتبر جمع‌آوری می‌کند.</li>
+                    <li><strong>جمع‌کننده اخبار:</strong> اخبار مرتبط با ارزهای دیجیتال را از منابع خبری جمع‌آوری می‌کند.</li>
+                    <li><strong>سرویس تولید متن:</strong> با API‌های مدل‌های زبانی بزرگ (LLM) برای تولید تحلیل بازار تعامل می‌کند.</li>
+                </ul>
 
-                    <h3>2.3 Data Flow</h3>
-                    <p>The system operates with the following data flow:</p>
-                    <ol>
-                        <li>Cryptocurrency price data is collected and stored in the database.</li>
-                        <li>News articles are aggregated from trusted sources and classified.</li>
-                        <li>The Text Generation Service accepts pricing data and news and generates market commentary.
-                        </li>
-                        <li>The generated content is stored as Posts with the applicable metadata.</li>
-                        <li>The content is read by users through the web interface.</li>
-                    </ol>
-                </div>
+                <h3>2.3 جریان داده</h3>
+                <p>سیستم با جریان داده زیر کار می‌کند:</p>
+                <ol>
+                    <li>داده‌های قیمت ارزهای دیجیتال جمع‌آوری و در پایگاه داده ذخیره می‌شوند.</li>
+                    <li>مقالات خبری از منابع معتبر جمع‌آوری و طبقه‌بندی می‌شوند.</li>
+                    <li>سرویس تولید متن، داده‌های قیمت و اخبار را دریافت و تفسیر بازار را تولید می‌کند.</li>
+                    <li>محتوای تولید شده به عنوان پست‌ها با متادیتای مربوطه ذخیره می‌شود.</li>
+                    <li>محتوا توسط کاربران از طریق رابط وب خوانده می‌شود.</li>
+                </ol>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">3. Data Models</h2>
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">3. مدل‌های داده</h2>
 
-                    <h3>3.1 Cryptocurrency Models</h3>
-                    <p>The main data models for cryptocurrency data are:</p>
-                    <ul>
-                        <li><strong>Cryptocurrency:</strong> Stores general information about cryptocurrencies like
-                            name, symbol, description, website, whitepaper URL, and current market data.</li>
-                        <li><strong>PriceData:</strong> Stores historical price data with timestamps to enable trends to
-                            be analyzed and visualized.</li>
-                    </ul>
+                <h3>3.1 مدل‌های ارز دیجیتال</h3>
+                <p>مدل‌های داده اصلی برای داده‌های ارزهای دیجیتال عبارتند از:</p>
+                <ul>
+                    <li><strong>Cryptocurrency:</strong> اطلاعات کلی درباره ارزهای دیجیتال مانند نام، نماد، توضیحات، وب‌سایت، آدرس وایت‌پیپر و داده‌های فعلی بازار را ذخیره می‌کند.</li>
+                    <li><strong>PriceData:</strong> داده‌های تاریخی قیمت با برچسب زمانی را برای تحلیل و نمایش روندها ذخیره می‌کند.</li>
+                </ul>
 
-                    <h3>3.2 News Models</h3>
-                    <p>The news subsystem includes the following models:</p>
-                    <ul>
-                        <li><strong>NewsCategory:</strong> Categorizes news articles by topics.</li>
-                        <li><strong>NewsSource:</strong> Stores news source details like feed URLs and fetch frequency.
-                        </li>
-                        <li><strong>NewsArticle:</strong> Stores aggregated news content along with references to
-                            cryptocurrencies.</li>
-                        <li><strong>ArticleWordFilter:</strong> Filters and classifies content.</li>
-                    </ul>
+                <h3>3.2 مدل‌های اخبار</h3>
+                <p>زیرسیستم اخبار شامل مدل‌های زیر است:</p>
+                <ul>
+                    <li><strong>NewsCategory:</strong> مقالات خبری را بر اساس موضوعات دسته‌بندی می‌کند.</li>
+                    <li><strong>NewsSource:</strong> جزئیات منبع خبری مانند آدرس‌های فید و فرکانس دریافت را ذخیره می‌کند.</li>
+                    <li><strong>NewsArticle:</strong> محتوای خبری جمع‌آوری شده را همراه با ارجاعات به ارزهای دیجیتال ذخیره می‌کند.</li>
+                    <li><strong>ArticleWordFilter:</strong> محتوا را فیلتر و طبقه‌بندی می‌کند.</li>
+                </ul>
 
-                    <h3>3.3 Content Models</h3>
-                    <p>These models are utilized by the content generation system:</p>
-                    <ul>
-                        <li><strong>PostCategory:</strong> Posts to categorize created content with slugified URLs for
-                            SEO.
-                        </li>
-                        <li><strong>Post:</strong> Stores AI-created analysis with more detailed metadata including
-                            connected cryptocurrencies, utilized model, category (hourly, daily, monthly), number of
-                            views, likes/dislikes, featured state, and QR code support.</li>
-                        <li><strong>Contact:</strong> Manages user requests and feedback with tracking capabilities.
-                        </li>
-                    </ul>
-                </div>
+                <h3>3.3 مدل‌های محتوا</h3>
+                <p>این مدل‌ها توسط سیستم تولید محتوا استفاده می‌شوند:</p>
+                <ul>
+                    <li><strong>PostCategory:</strong> پست‌ها را برای دسته‌بندی محتوای ایجاد شده با URL‌های اسلاگ شده برای SEO دسته‌بندی می‌کند.</li>
+                    <li><strong>Post:</strong> تحلیل‌های ایجاد شده توسط هوش مصنوعی را با متادیتای دقیق‌تر شامل ارزهای دیجیتال مرتبط، مدل استفاده شده، دسته‌بندی (ساعتی، روزانه، ماهانه)، تعداد بازدیدها، لایک/دیسلایک، وضعیت ویژه و پشتیبانی از کد QR ذخیره می‌کند.</li>
+                    <li><strong>Contact:</strong> درخواست‌ها و بازخوردهای کاربران را با قابلیت‌های پیگیری مدیریت می‌کند.</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">4. AI Text Generation</h2>
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">4. تولید متن هوش مصنوعی</h2>
 
-                    <h3>4.1 Text Generation Service</h3>
-                    <p>The platform utilizes a sophisticated text generation service that communicates with Large
-                        Language Models to produce market analysis. Its main features are:</p>
-                    <ul>
-                        <li>Integration with {{ MODEL_NAME }} producing high-quality text.</li>
-                        <li>Structured prompt engineering for ensuring consistent output format.</li>
-                        <li>Contextual generation from available price data and recent news.</li>
-                        <li>Support for different timeframes of analysis (hourly, daily, monthly).</li>
-                    </ul>
+                <h3>4.1 سرویس تولید متن</h3>
+                <p>پلتفرم از یک سرویس پیشرفته تولید متن استفاده می‌کند که با مدل‌های زبانی بزرگ برای تولید تحلیل بازار ارتباط برقرار می‌کند. ویژگی‌های اصلی آن عبارتند از:</p>
+                <ul>
+                    <li>ادغام با {{ MODEL_NAME }} که متن با کیفیت بالا تولید می‌کند.</li>
+                    <li>مهندسی پرامپت ساختاریافته برای اطمینان از فرمت خروجی یکنواخت.</li>
+                    <li>تولید متن بر اساس زمینه از داده‌های قیمت موجود و اخبار اخیر.</li>
+                    <li>پشتیبانی از بازه‌های زمانی مختلف تحلیل (ساعتی، روزانه، ماهانه).</li>
+                </ul>
 
-                    <h3>4.2 Content Generation Process</h3>
-                    <p>The content generation process is performed in these steps:</p>
-                    <ol>
-                        <li>Get latest and historical price figures of the target cryptocurrency.</li>
-                        <li>Get latest news articles related to the cryptocurrency.</li>
-                        <li>Generate a formatted prompt using market information and news background.</li>
-                        <li>Submit a request to the language model API using the prompt.</li>
-                        <li>Process the result content (render Markdown to HTML, formatting).</li>
-                        <li>Store the content as a Post with proper metadata.</li>
-                    </ol>
-                </div>
+                <h3>4.2 فرآیند تولید محتوا</h3>
+                <p>فرآیند تولید محتوا در مراحل زیر انجام می‌شود:</p>
+                <ol>
+                    <li>دریافت آخرین و تاریخی ارقام قیمت ارز دیجیتال هدف.</li>
+                    <li>دریافت آخرین مقالات خبری مرتبط با ارز دیجیتال.</li>
+                    <li>ایجاد یک پرامپت فرمت‌بندی شده با استفاده از اطلاعات بازار و پیشینه خبری.</li>
+                    <li>ارسال درخواست به API مدل زبانی با استفاده از پرامپت.</li>
+                    <li>پردازش محتوای نتیجه (تبدیل مارک‌داون به HTML، فرمت‌بندی).</li>
+                    <li>ذخیره محتوا به عنوان یک پست با متادیتای مناسب.</li>
+                </ol>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">5. Data Collection and Processing</h2>
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">5. جمع‌آوری و پردازش داده‌ها</h2>
 
-                    <h3>5.1 Cryptocurrency Data</h3>
-                    <p>Cryptocurrency price data is collected as follows:</p>
-                    <ul>
-                        <li>API access to cryptocurrency price feeds.</li>
-                        <li>Scheduled polling for periodic refresh of prices.</li>
-                        <li>Historical data storage to study trends.</li>
-                    </ul>
+                <h3>5.1 داده‌های ارز دیجیتال</h3>
+                <p>داده‌های قیمت ارزهای دیجیتال به شرح زیر جمع‌آوری می‌شوند:</p>
+                <ul>
+                    <li>دسترسی API به فیدهای قیمت ارزهای دیجیتال.</li>
+                    <li>نظرسنجی زمان‌بندی شده برای به‌روزرسانی دوره‌ای قیمت‌ها.</li>
+                    <li>ذخیره‌سازی داده‌های تاریخی برای مطالعه روندها.</li>
+                </ul>
 
-                    <h3>5.2 News Collection</h3>
-                    <p>News content is collected by:</p>
-                    <ul>
-                        <li>RSS feed subscription to trustworthy sources of news.</li>
-                        <li>Configurability of fetch frequency per source.</li>
-                        <li>Parsing of content with BeautifulSoup4.</li>
-                        <li>Classification by automatic methods with cryptocurrency tagging.</li>
-                    </ul>
+                <h3>5.2 جمع‌آوری اخبار</h3>
+                <p>محتوای خبری به روش‌های زیر جمع‌آوری می‌شود:</p>
+                <ul>
+                    <li>اشتراک فید RSS به منابع خبری قابل اعتماد.</li>
+                    <li>قابلیت پیکربندی فرکانس دریافت برای هر منبع.</li>
+                    <li>تجزیه محتوا با BeautifulSoup4.</li>
+                    <li>طبقه‌بندی با روش‌های خودکار با برچسب‌گذاری ارزهای دیجیتال.</li>
+                </ul>
 
-                    <h3>5.3 Data Processing</h3>
-                    <p>The platform utilizes several methods of data processing:</p>
-                    <ul>
-                        <li>Natural Language Processing to process content.</li>
-                        <li>scikit-learn for machine learning operations.</li>
-                        <li>Statistical analysis for price trend identification.</li>
-                        <li>Word filtering for content classification.</li>
-                    </ul>
-                </div>
+                <h3>5.3 پردازش داده‌ها</h3>
+                <p>پلتفرم از چندین روش پردازش داده استفاده می‌کند:</p>
+                <ul>
+                    <li>پردازش زبان طبیعی برای پردازش محتوا.</li>
+                    <li>scikit-learn برای عملیات یادگیری ماشین.</li>
+                    <li>تحلیل آماری برای شناسایی روند قیمت.</li>
+                    <li>فیلترینگ کلمات برای طبقه‌بندی محتوا.</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">6. User Interface</h2>
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">6. رابط کاربری</h2>
 
-                    <h3>6.1 Frontend Technologies</h3>
-                    <p>The user interface is built with:</p>
-                    <ul>
-                        <li>Bootstrap 5.3 for responsive layouts.</li>
-                        <li>Chart.js for graphical data representation.</li>
-                        <li>Django templating system for server-side templating.</li>
-                        <li>Font Awesome for iconfont.</li>
-                    </ul>
+                <h3>6.1 فناوری‌های فرانت‌اند</h3>
+                <p>رابط کاربری با موارد زیر ساخته شده است:</p>
+                <ul>
+                    <li>Bootstrap 5.3 برای طرح‌بندی‌های واکنش‌گرا.</li>
+                    <li>Chart.js برای نمایش گرافیکی داده‌ها.</li>
+                    <li>سیستم قالب‌بندی Django برای قالب‌بندی سمت سرور.</li>
+                    <li>Font Awesome برای آیکون‌فونت.</li>
+                </ul>
 
-                    <h3>6.2 Key Interface Components</h3>
-                    <p>The system includes the following interface components:</p>
-                    <ul>
-                        <li><strong>Home Page:</strong> List of categorized content and featured posts.</li>
-                        <li><strong>Live Prices:</strong> Tracking of cryptocurrency prices in real-time.</li>
-                        <li><strong>Post Detail:</strong> Displays AI-enabled analysis with price charts and related
-                            content.</li>
-                        <li><strong>RSS Feed:</strong> Provides content syndication functionality.</li>
-                    </ul>
-                </div>
+                <h3>6.2 اجزای اصلی رابط</h3>
+                <p>سیستم شامل اجزای رابط زیر است:</p>
+                <ul>
+                    <li><strong>صفحه اصلی:</strong> لیست محتوای دسته‌بندی شده و پست‌های ویژه.</li>
+                    <li><strong>قیمت‌های زنده:</strong> پیگیری قیمت‌های ارزهای دیجیتال در زمان واقعی.</li>
+                    <li><strong>جزئیات پست:</strong> تحلیل‌های مبتنی بر هوش مصنوعی را با نمودارهای قیمت و محتوای مرتبط نمایش می‌دهد.</li>
+                    <li><strong>فید RSS:</strong> قابلیت سندیکای محتوا را فراهم می‌کند.</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">7. Deployment and Scalability</h2>
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">7. استقرار و مقیاس‌پذیری</h2>
 
-                    <h3>7.1 Current at present</h3>
-                    <p>The app is currently deployed with:</p>
-                    <ul>
-                        <li>Development Django server (for development needs).</li>
-                        <li>SQLite database (perfect for normal traffic load).</li>
-                        <li>Django-based serving of static files.</li>
-                    </ul>
+                <h3>7.1 وضعیت فعلی</h3>
+                <p>برنامه در حال حاضر با موارد زیر مستقر شده است:</p>
+                <ul>
+                    <li>سرور توسعه Django (برای نیازهای توسعه).</li>
+                    <li>پایگاه داده SQLite (مناسب برای بار ترافیکی معمولی).</li>
+                    <li>ارائه فایل‌های استاتیک مبتنی بر Django.</li>
+                </ul>
 
-                    <h3>7.2 Scalability Matters</h3>
-                    <p>If there's a scale up to large traffic, following adjustments are suggested:</p>
-                    <ul>
-                        <li>Database upgrade to PostgreSQL for optimized database performance.</li>
-                        <li>Gunicorn/Nginx serving for a production-level serve.</li>
-                        <li>Caching use for frequent read data.</li>
-                        <li>Content Delivery Network (CDN) for serving static files.</li>
-                        <li>Docker for containerization, thereby easy deployment.</li>
-                    </ul>
-                </div>
+                <h3>7.2 مسائل مقیاس‌پذیری</h3>
+                <p>اگر مقیاس به ترافیک بزرگ افزایش یابد، تنظیمات زیر پیشنهاد می‌شود:</p>
+                <ul>
+                    <li>ارتقاء پایگاه داده به PostgreSQL برای عملکرد بهینه پایگاه داده.</li>
+                    <li>استفاده از Gunicorn/Nginx برای ارائه در سطح تولید.</li>
+                    <li>استفاده از کش برای داده‌های پرخوان.</li>
+                    <li>شبکه تحویل محتوا (CDN) برای ارائه فایل‌های استاتیک.</li>
+                    <li>Docker برای کانتینرسازی، در نتیجه استقرار آسان.</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">8. Future Development</h2>
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">8. توسعه آینده</h2>
 
-                    <p>The {{ WEBSITE_NAME }} platform has several potential areas for future development:</p>
-                    <ul>
-                        <li><strong>API Services:</strong> Providing data and analysis through RESTful APIs.</li>
-                        <li><strong>User Accounts:</strong> Personalized content and saved preferences.</li>
-                        <li><strong>Advanced Analytics:</strong> More sophisticated price prediction and trend analysis.
-                        </li>
-                        <li><strong>Mobile Applications:</strong> Native mobile applications for iOS and Android.</li>
-                        <li><strong>Better AI Models:</strong> Integration with more sophisticated financial language
-                            models.</li>
-                        <li><strong>Community Features:</strong> User forums and user-generated content.</li>
-                    </ul>
-                </div>
+                <p>پلتفرم {{ WEBSITE_NAME }} چندین زمینه بالقوه برای توسعه آینده دارد:</p>
+                <ul>
+                    <li><strong>سرویس‌های API:</strong> ارائه API برای دسترسی به داده‌ها و تحلیل‌ها.</li>
+                    <li><strong>پرسنالی‌سازی:</strong> ارائه محتوای شخصی‌سازی شده بر اساس ترجیحات کاربر.</li>
+                    <li><strong>هشدارها:</strong> هشدارهای قیمت و اخبار برای کاربران.</li>
+                    <li><strong>تحلیل پیشرفته:</strong> افزودن الگوریتم‌های پیش‌بینی و تحلیل احساسات.</li>
+                    <li><strong>اپلیکیشن موبایل:</strong> توسعه اپلیکیشن‌های بومی برای iOS و Android.</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">9. Conclusion</h2>
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">9. نتیجه‌گیری</h2>
 
-                    <p>{{ WEBSITE_NAME }} is a state-of-the-art platform for cryptocurrency news services, leveraging
-                        artificial intelligence to show users relevant information. The platform's architecture is
-                        scalable and adaptable, allowing it to be developed and optimized further.</p>
+                <p>{{ WEBSITE_NAME }} یک پلتفرم نوآورانه است که از هوش مصنوعی برای ارائه تحلیل‌های با کیفیت بالا در بازار ارزهای دیجیتال استفاده می‌کند. با ترکیب داده‌های قیمت، اخبار و تولید متن هوش مصنوعی، ما یک منبع جامع برای اطلاعات و بینش‌های بازار ارائه می‌دهیم.</p>
 
-                    <p>By bringing real-time information, news feeds, and AI-facilitated analysis into its fold, {{
-                        WEBSITE_NAME }} offers a unique value proposition among the cryptocurrency knowledge ecosystem.
-                        The technical underpinning described here gives a robust base for continuing operations and
-                        expansion into the future.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">10. Disclaimer</h2>
-
-                    <p>The content provided on this website is informational in nature and should not be interpreted as
-                        financial advice. Investments made in cryptocurrency are volatile and risky. Always research on
-                        your own and consult the advice of a qualified financial planner before investing.</p>
-
-                    <p>Past performance doesn't mean future results. Invest at your own risk.</p>
-                </div>
+                <p>این وایت‌پیپر معماری فنی و قابلیت‌های پلتفرم را توضیح می‌دهد و نشان می‌دهد که چگونه {{ WEBSITE_NAME }} به کاربران کمک می‌کند تا در دنیای پیچیده ارزهای دیجیتال آگاهانه‌تر عمل کنند.</p>
             </div>
         </div>
     </div>

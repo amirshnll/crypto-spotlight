@@ -1,44 +1,44 @@
 {% extends 'base.html' %}
 
-{% block title %}Donate - {{ WEBSITE_NAME }}{% endblock %}
+{% block title %}حمایت مالی - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block meta_keywords %}donate, cryptocurrency, live crypto prices, crypto market statistics, digital currencies, {{
+{% block meta_keywords %}حمایت مالی، ارز دیجیتال، قیمت‌های زنده ارزهای دیجیتال، آمار بازار ارزهای دیجیتال، ارزهای دیجیتال، {{
 WEBSITE_NAME }}{% endblock %}
 
-{% block meta_description %}Donate to support our platform. Stay up-to-date with real-time cryptocurrency prices and
-market metrics at CryptoSpotlight.
-Support our platform by giving a donation. Get live cryptocurrency prices and market data {{ WEBSITE_NAME }}.
+{% block meta_description %}برای حمایت از پلتفرم ما کمک مالی کنید. با قیمت‌های لحظه‌ای ارزهای دیجیتال و
+معیارهای بازار در {{ WEBSITE_NAME }} به‌روز بمانید.
+با اهدای کمک مالی از پلتفرم ما حمایت کنید. قیمت‌های زنده ارزهای دیجیتال و داده‌های بازار را در {{ WEBSITE_NAME }} دریافت کنید.
 {% endblock %}
 
-{% block og_title %}Donate - {{ WEBSITE_NAME }}{% endblock %}
+{% block og_title %}حمایت مالی - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block og_description %}Donate to support our platform. Stay up-to-date with real-time cryptocurrency prices and
-market metrics at CryptoSpotlight.
-Support our platform by giving a donation. Get live cryptocurrency prices and market data {{ WEBSITE_NAME }}.
+{% block og_description %}برای حمایت از پلتفرم ما کمک مالی کنید. با قیمت‌های لحظه‌ای ارزهای دیجیتال و
+معیارهای بازار در {{ WEBSITE_NAME }} به‌روز بمانید.
+با اهدای کمک مالی از پلتفرم ما حمایت کنید. قیمت‌های زنده ارزهای دیجیتال و داده‌های بازار را در {{ WEBSITE_NAME }} دریافت کنید.
 {% endblock %}
 
-{% block dc_title %}Donate - {{ WEBSITE_NAME }}{% endblock %}
+{% block dc_title %}حمایت مالی - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block dc_keywords %}donate, cryptocurrency, live crypto prices, crypto market statistics, digital currencies, {{
+{% block dc_keywords %}حمایت مالی، ارز دیجیتال، قیمت‌های زنده ارزهای دیجیتال، آمار بازار ارزهای دیجیتال، ارزهای دیجیتال، {{
 WEBSITE_NAME }}{% endblock %}
 
-{% block dc_description %}Donate to support our platform. Stay up-to-date with real-time cryptocurrency prices and
-market metrics at CryptoSpotlight.
-Support our platform by giving a donation. Get live cryptocurrency prices and market data {{ WEBSITE_NAME }}.
+{% block dc_description %}برای حمایت از پلتفرم ما کمک مالی کنید. با قیمت‌های لحظه‌ای ارزهای دیجیتال و
+معیارهای بازار در {{ WEBSITE_NAME }} به‌روز بمانید.
+با اهدای کمک مالی از پلتفرم ما حمایت کنید. قیمت‌های زنده ارزهای دیجیتال و داده‌های بازار را در {{ WEBSITE_NAME }} دریافت کنید.
 {% endblock %}
 
-{% block twitter_title %}Donate - {{ WEBSITE_NAME }}{% endblock %}
+{% block twitter_title %}حمایت مالی - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block twitter_description %}Donate to support our platform. Stay up-to-date with real-time cryptocurrency prices and
-market metrics at CryptoSpotlight.
-Support our platform by giving a donation. Get live cryptocurrency prices and market data {{ WEBSITE_NAME }}.
+{% block twitter_description %}برای حمایت از پلتفرم ما کمک مالی کنید. با قیمت‌های لحظه‌ای ارزهای دیجیتال و
+معیارهای بازار در {{ WEBSITE_NAME }} به‌روز بمانید.
+با اهدای کمک مالی از پلتفرم ما حمایت کنید. قیمت‌های زنده ارزهای دیجیتال و داده‌های بازار را در {{ WEBSITE_NAME }} دریافت کنید.
 {% endblock %}
 
 {% block breadcrumb_items %},
 {
 "@type": "ListItem",
 "position": 2,
-"name": "Donate",
+"name": "حمایت مالی",
 "item": "{{ request.scheme }}://{{ request.get_host }}{% url 'donate' %}"
 }
 {% endblock %}
@@ -48,9 +48,8 @@ Support our platform by giving a donation. Get live cryptocurrency prices and ma
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Donate - {{ WEBSITE_NAME }}",
-        "description": "Donate to support our platform. Stay up-to-date with real-time cryptocurrency prices and market metrics at CryptoSpotlight.
-        Support our platform by giving a donation. Get live cryptocurrency prices and market data {{ WEBSITE_NAME }}.",
+        "name": "حمایت مالی - {{ WEBSITE_NAME }}",
+        "description": "برای حمایت از پلتفرم ما کمک مالی کنید. با قیمت‌های لحظه‌ای ارزهای دیجیتال و معیارهای بازار در {{ WEBSITE_NAME }} به‌روز بمانید. با اهدای کمک مالی از پلتفرم ما حمایت کنید. قیمت‌های زنده ارزهای دیجیتال و داده‌های بازار را در {{ WEBSITE_NAME }} دریافت کنید.",
         "url": "{{ request.scheme }}://{{ request.get_host }}{% url 'donate' %}"
     }
 </script>
@@ -58,10 +57,10 @@ Support our platform by giving a donation. Get live cryptocurrency prices and ma
 
 {% block content %}
 <div class="container py-5">
-    <h1 class="display-4 text-center mb-4">Donate</h1>
+    <h1 class="display-4 text-center mb-4">حمایت مالی</h1>
     <p class="text-muted text-center">
         <small>
-            Support our platform by donating Bitcoin or Ethereum.
+            با اهدای بیت‌کوین یا اتریوم از پلتفرم ما حمایت کنید.
         </small>
     </p>
 </div>
@@ -70,18 +69,18 @@ Support our platform by giving a donation. Get live cryptocurrency prices and ma
     <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="card wallet p-3 text-center">
-                <h3 class="card-title">Bitcoin</h3>
+                <h3 class="card-title">بیت‌کوین</h3>
                 <p class="card-text">{{ bitcoin }}</p>
-                <img class="img-fluid m-auto" src="{{ bitcoin_qr }}" height="200" width="200" alt="Bitcoin QR Code"
-                    title="Bitcoin QR Code">
+                <img class="img-fluid m-auto" src="{{ bitcoin_qr }}" height="200" width="200" alt="کد QR بیت‌کوین"
+                    title="کد QR بیت‌کوین">
             </div>
         </div>
         <div class="col-md-4">
             <div class="card wallet p-3 text-center">
-                <h3 class="card-title">Ethereum</h3>
+                <h3 class="card-title">اتریوم</h3>
                 <p class="card-text">{{ ethereum }}</p>
-                <img class="img-fluid m-auto" src="{{ ethereum_qr }}" height="200" width="200" alt="Ethereum QR Code"
-                    title="Ethereum QR Code">
+                <img class="img-fluid m-auto" src="{{ ethereum_qr }}" height="200" width="200" alt="کد QR اتریوم"
+                    title="کد QR اتریوم">
             </div>
         </div>
     </div>

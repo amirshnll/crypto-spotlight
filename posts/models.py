@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from crypto.models import Cryptocurrency
-from crypto_spotlight.slugify import generate_unique_slug
+from crypto_website.slugify import generate_unique_slug
 
 
 class PostCategory(models.Model):

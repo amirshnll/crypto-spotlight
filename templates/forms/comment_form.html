@@ -2,7 +2,7 @@
 
 <div class="card mb-4" id="commentForm">
     <div class="card-body">
-        <h5 class="card-title">{% if parent %}Reply to Comment{% else %}Leave a Comment{% endif %}</h5>
+        <h5 class="card-title">{% if parent %}پاسخ به دیدگاه{% else %}دیدگاه خود را بنویسید{% endif %}</h5>
         <form method="post" action="{% url 'submit_comment' post.slug %}" class="needs-validation" novalidate>
             {% csrf_token %}
             {% if parent %}
@@ -11,32 +11,32 @@
             <input type="hidden" name="is_approved" value="false">
 
             <div class="mb-3">
-                <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
+                <label for="name" class="form-label">نام <sup class="text-danger">*</sup></label>
                 <input type="text" class="form-control" id="name" name="name" maxlength="100" required>
                 <div class="invalid-feedback">
-                    Please provide your name.
+                    لطفا نام خود را وارد کنید.
                 </div>
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label">Email <sup class="text-danger">*</sup></label>
+                <label for="email" class="form-label">ایمیل <sup class="text-danger">*</sup></label>
                 <input type="email" class="form-control" id="email" name="email" maxlength="500" required>
                 <div class="invalid-feedback">
-                    Please provide a valid email address.
+                    لطفا یک آدرس ایمیل معتبر وارد کنید.
                 </div>
             </div>
 
             <div class="mb-3">
-                <label for="content" class="form-label">Comment <sup class="text-danger">*</sup></label>
+                <label for="content" class="form-label">دیدگاه <sup class="text-danger">*</sup></label>
                 <textarea class="form-control" id="content" name="content" rows="4" maxlength="1000" required></textarea>
                 <div class="invalid-feedback">
-                    Please write your comment.
+                    لطفا دیدگاه خود را بنویسید.
                 </div>
             </div>
 
             <button type="submit" class="btn btn-dark">
                 <i class="fas fa-paper-plane me-2"></i>
-                {% if parent %}Submit Reply{% else %}Submit Comment{% endif %}
+                {% if parent %}ارسال پاسخ{% else %}ارسال دیدگاه{% endif %}
             </button>
 
             <div class="mb-3 mt-2">

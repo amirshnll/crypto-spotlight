@@ -1,38 +1,40 @@
 {% extends "base.html" %}
 
-{% block title %}Frequently Asked Questions (FAQs) - {{ WEBSITE_NAME }}{% endblock %}
+{% block title %}سوالات متداول (FAQ) - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block meta_keywords %}faq, cryptocurrency news, crypto analysis, digital assets, blockchain news, crypto insights,
-crypto education, cryptocurrency updates, crypto market news, digital currency news{% endblock %}
+{% block meta_keywords %}سوالات متداول، اخبار ارزهای دیجیتال، تحلیل ارزهای دیجیتال، دارایی‌های دیجیتال، اخبار بلاکچین،
+بینش‌های ارزهای دیجیتال، آموزش ارزهای دیجیتال، به‌روزرسانی‌های ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز
+دیجیتال{% endblock %}
 
 {% block meta_description %}
-Find answers to common questions about {{ WEBSITE_NAME }}, cryptocurrency fundamentals, using our website, and technical
-questions below.
+پاسخ سوالات رایج درباره {{ WEBSITE_NAME }}، مفاهیم اساسی ارزهای دیجیتال، نحوه استفاده از وب‌سایت ما و سوالات فنی را در
+زیر بیابید.
 {% endblock %}
 
-{% block og_title %}Frequently Asked Questions (FAQs) - {{ WEBSITE_NAME }}{% endblock %}
+{% block og_title %}سوالات متداول (FAQ) - {{ WEBSITE_NAME }}{% endblock %}
 
 {% block og_description %}
-Find answers to common questions about {{ WEBSITE_NAME }}, cryptocurrency fundamentals, using our website, and technical
-questions below.
+پاسخ سوالات رایج درباره {{ WEBSITE_NAME }}، مفاهیم اساسی ارزهای دیجیتال، نحوه استفاده از وب‌سایت ما و سوالات فنی را در
+زیر بیابید.
 {% endblock %}
 
-{% block dc_title %}Frequently Asked Questions (FAQs) - {{ WEBSITE_NAME }}{% endblock %}
+{% block dc_title %}سوالات متداول (FAQ) - {{ WEBSITE_NAME }}{% endblock %}
 
-{% block dc_keywords %}faq, cryptocurrency news, crypto analysis, digital assets, blockchain news, crypto insights,
-crypto education, cryptocurrency updates, crypto market news, digital currency news{% endblock %}
+{% block dc_keywords %}سوالات متداول، اخبار ارزهای دیجیتال، تحلیل ارزهای دیجیتال، دارایی‌های دیجیتال، اخبار بلاکچین،
+بینش‌های ارزهای دیجیتال، آموزش ارزهای دیجیتال، به‌روزرسانی‌های ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز
+دیجیتال{% endblock %}
 
 {% block dc_description %}
-Find answers to common questions about {{ WEBSITE_NAME }}, cryptocurrency fundamentals, using our website, and technical
-questions below.{% endblock %}
+پاسخ سوالات رایج درباره {{ WEBSITE_NAME }}، مفاهیم اساسی ارزهای دیجیتال، نحوه استفاده از وب‌سایت ما و سوالات فنی را در
+زیر بیابید.{% endblock %}
 
-{% block twitter_title %}Frequently Asked Questions (FAQs) - {{ WEBSITE_NAME }}{% endblock %}
+{% block twitter_title %}سوالات متداول (FAQ) - {{ WEBSITE_NAME }}{% endblock %}
 
 {% block breadcrumb_items %},
 {
 "@type": "ListItem",
 "position": 2,
-"name": "Frequently Asked Questions (FAQs)",
+"name": "سوالات متداول (FAQ)",
 "item": "{{ request.scheme }}://{{ request.get_host }}{% url 'faq' %}"
 }
 {% endblock %}
@@ -47,66 +49,66 @@ questions below.{% endblock %}
   "mainEntity": [
   {
     "@type": "Question",
-    "name": "What is {{ WEBSITE_NAME }}?",
+    "name": "{{ WEBSITE_NAME }} چیست؟",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "{{ WEBSITE_NAME }} is a general crypto news and analysis website providing new information, market analysis, and educational resources in the crypto-ecosystem."
+      "text": "{{ WEBSITE_NAME }} یک وب‌سایت عمومی اخبار و تحلیل ارزهای دیجیتال است که اطلاعات جدید، تحلیل بازار و منابع آموزشی را در اکوسیستم ارزهای دیجیتال ارائه می‌دهد."
     }
   },
   {
       "@type": "Question",
-      "name": "How often is content updated?",
+      "name": "محتوا چند وقت یکبار به‌روزرسانی می‌شود؟",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We update content on a daily basis to capture the current news, market analysis, and recent events in cryptocurrencies. This serves to keep you informed about what is taking place in this rapidly changing world of cryptocurrencies."
+        "text": "ما محتوا را به صورت روزانه به‌روزرسانی می‌کنیم تا اخبار فعلی، تحلیل بازار و رویدادهای اخیر در ارزهای دیجیتال را پوشش دهیم. این به شما کمک می‌کند تا از آنچه در دنیای به سرعت در حال تغییر ارزهای دیجیتال رخ می‌دهد، مطلع باشید."
       }
     },
     {
       "@type": "Question",
-      "name": "What is cryptocurrency?",
+      "name": "ارز دیجیتال چیست؟",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cryptocurrency is a digital or virtual currency that is secured by cryptography. It operates on decentralized networks based on blockchain technology."
+        "text": "ارز دیجیتال یک ارز دیجیتال یا مجازی است که توسط رمزنگاری ایمن شده است. این ارزها بر روی شبکه‌های غیرمتمرکز مبتنی بر فناوری بلاکچین فعالیت می‌کنند."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I invest in cryptocurrency?",
+      "name": "چگونه در ارزهای دیجیتال سرمایه‌گذاری کنم؟",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For investing in cryptocurrency, you will have to choose a trustworthy cryptocurrency exchange first, create an account, get verified, and then deposit money. We recommend conducting extensive research before investing in any product."
+        "text": "برای سرمایه‌گذاری در ارزهای دیجیتال، ابتدا باید یک صرافی ارز دیجیتال قابل اعتماد انتخاب کنید، یک حساب کاربری ایجاد کنید، تأیید هویت شوید و سپس پول واریز کنید. ما توصیه می‌کنیم قبل از سرمایه‌گذاری در هر محصولی، تحقیقات گسترده‌ای انجام دهید."
       }
     },
     {
       "@type": "Question",
-      "name": "How can I stay updated with the latest news?",
+      "name": "چگونه می‌توانم از آخرین اخبار مطلع شوم؟",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can keep yourself updated by visiting our homepage regularly, subscribing to our newsletter, and following us on social media for real-time updates."
+        "text": "شما می‌توانید با بازدید منظم از صفحه اصلی ما، اشتراک در خبرنامه ما و دنبال کردن ما در شبکه‌های اجتماعی برای به‌روزرسانی‌های لحظه‌ای، خود را به‌روز نگه دارید."
       }
     },
     {
       "@type": "Question",
-      "name": "Do you have market analysis?",
+      "name": "آیا تحلیل بازار ارائه می‌دهید؟",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we provide detailed market analysis, price trends, trading volumes, and technical analysis for the majority of cryptocurrencies."
+        "text": "بله، ما تحلیل‌های دقیق بازار، روندهای قیمت، حجم معاملات و تحلیل‌های فنی برای اکثر ارزهای دیجیتال ارائه می‌دهیم."
       }
     },
     {
       "@type": "Question",
-      "name": "What is blockchain technology?",
+      "name": "فناوری بلاکچین چیست؟",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Blockchain is a decentralized digital ledger that maintains a record of transactions on a network of computers. It's the technology behind most cryptocurrencies."
+        "text": "بلاکچین یک دفتر کل دیجیتال غیرمتمرکز است که سوابق تراکنش‌ها را در یک شبکه از کامپیوترها نگهداری می‌کند. این فناوری پشت اکثر ارزهای دیجیتال است."
       }
     },
     {
       "@type": "Question",
-      "name": "What are smart contracts?",
+      "name": "قراردادهای هوشمند چیست؟",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Smart contracts are self-executing contracts where the terms of the agreement are written directly into code. They automatically run when certain predefined conditions are fulfilled."
+        "text": "قراردادهای هوشمند، قراردادهای خودکاری هستند که شرایط توافق مستقیماً در کد نوشته شده است. آنها به طور خودکار زمانی که شرایط از پیش تعیین شده خاصی برآورده شوند، اجرا می‌شوند."
       }
     }
   ]
@@ -115,11 +117,11 @@ questions below.{% endblock %}
 {% endblock %}
 
 <div class="container py-5">
-    <h1 class="display-4 text-center mb-4">Frequently Asked Questions</h1>
+    <h1 class="display-4 text-center mb-4">سوالات متداول</h1>
     <p class="text-muted text-center">
         <small>
-            Find answers to common questions about {{ WEBSITE_NAME }}, cryptocurrency fundamentals, how to
-            use our site, and technical questions below.
+            پاسخ سوالات رایج درباره {{ WEBSITE_NAME }}، مفاهیم اساسی ارزهای دیجیتال، نحوه استفاده از سایت ما و سوالات
+            فنی را در زیر بیابید.
         </small>
     </p>
 </div>
@@ -130,99 +132,98 @@ questions below.{% endblock %}
             <h2 class="accordion-header" id="faqsHeading">
                 <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#faqsCollapse" aria-expanded="true" aria-controls="faqsCollapse">
-                    {{ WEBSITE_NAME }} Overview
+                    نمای کلی {{ WEBSITE_NAME }}
                 </button>
             </h2>
             <div id="faqsCollapse" class="accordion-collapse collapse show" aria-labelledby="faqsHeading"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <div class="mb-4">
-                        <h3 class="font-semibold mb-2">What is {{ WEBSITE_NAME }}?</h3>
-                        <p>{{ WEBSITE_NAME }} is a general crypto news and analysis website providing new information,
-                            market analysis, and educational resources in the crypto-ecosystem.</p>
+                        <h3 class="font-semibold mb-2">{{ WEBSITE_NAME }} چیست؟</h3>
+                        <p>{{ WEBSITE_NAME }} یک وب‌سایت عمومی اخبار و تحلیل ارزهای دیجیتال است که اطلاعات جدید، تحلیل
+                            بازار و منابع آموزشی را در اکوسیستم ارزهای دیجیتال ارائه می‌دهد.</p>
                     </div>
                     <div class="mb-4">
-                        <h3 class="font-semibold mb-2">How often is content updated?</h3>
-                        <p>We update content on a daily basis to capture the current news, market analysis, and recent
-                            events in cryptocurrencies. This serves to keep you informed about what is taking place in
-                            this rapidly changing world of cryptocurrencies.</p>
+                        <h3 class="font-semibold mb-2">محتوا چند وقت یکبار به‌روزرسانی می‌شود؟</h3>
+                        <p>ما محتوا را به صورت روزانه به‌روزرسانی می‌کنیم تا اخبار فعلی، تحلیل بازار و رویدادهای اخیر در
+                            ارزهای دیجیتال را پوشش دهیم. این به شما کمک می‌کند تا از آنچه در دنیای به سرعت در حال تغییر
+                            ارزهای دیجیتال رخ می‌دهد، مطلع باشید.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Cryptocurrency Basics -->
+        <!-- مفاهیم اساسی ارزهای دیجیتال -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="cryptoBasicsHeading">
                 <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#cryptoBasicsCollapse" aria-expanded="false" aria-controls="cryptoBasicsCollapse">
-                    Cryptocurrency Basics
+                    مفاهیم اساسی ارزهای دیجیتال
                 </button>
             </h2>
             <div id="cryptoBasicsCollapse" class="accordion-collapse collapse" aria-labelledby="cryptoBasicsHeading"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <div class="mb-4">
-                        <h3 class="font-semibold mb-2">What is cryptocurrency?</h3>
-                        <p>Cryptocurrency is a digital or virtual currency that is secured by cryptography. It operates
-                            on decentralized networks based on blockchain technology.</p>
+                        <h3 class="font-semibold mb-2">ارز دیجیتال چیست؟</h3>
+                        <p>ارز دیجیتال یک ارز دیجیتال یا مجازی است که توسط رمزنگاری ایمن شده است. این ارزها بر روی
+                            شبکه‌های غیرمتمرکز مبتنی بر فناوری بلاکچین فعالیت می‌کنند.</p>
                     </div>
                     <div class="mb-4">
-                        <h3 class="font-semibold mb-2">How do I invest in cryptocurrency?</h3>
-                        <p>For investing in cryptocurrency, you will have to choose a trustworthy cryptocurrency
-                            exchange first, create an account, get verified, and then deposit money. We recommend
-                            conducting extensive research before investing in any product.</p>
+                        <h3 class="font-semibold mb-2">چگونه در ارزهای دیجیتال سرمایه‌گذاری کنم؟</h3>
+                        <p>برای سرمایه‌گذاری در ارزهای دیجیتال، ابتدا باید یک صرافی ارز دیجیتال قابل اعتماد انتخاب کنید،
+                            یک حساب کاربری ایجاد کنید، تأیید هویت شوید و سپس پول واریز کنید. ما توصیه می‌کنیم قبل از
+                            سرمایه‌گذاری در هر محصولی، تحقیقات گسترده‌ای انجام دهید.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Using Our Platform -->
+        <!-- استفاده از پلتفرم ما -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="platformHeading">
                 <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#platformCollapse" aria-expanded="false" aria-controls="platformCollapse">
-                    Using Our Platform
+                    استفاده از پلتفرم ما
                 </button>
             </h2>
             <div id="platformCollapse" class="accordion-collapse collapse" aria-labelledby="platformHeading"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <div class="mb-4">
-                        <h3 class="font-semibold mb-2">How can I stay updated with the latest news?</h3>
-                        <p>You can keep yourself updated by visiting our homepage regularly, subscribing to our
-                            newsletter, and following us on social media for real-time updates.</p>
+                        <h3 class="font-semibold mb-2">چگونه می‌توانم از آخرین اخبار مطلع شوم؟</h3>
+                        <p>شما می‌توانید با بازدید منظم از صفحه اصلی ما، اشتراک در خبرنامه ما و دنبال کردن ما در
+                            شبکه‌های اجتماعی برای به‌روزرسانی‌های لحظه‌ای، خود را به‌روز نگه دارید.</p>
                     </div>
                     <div class="mb-4">
-                        <h3 class="font-semibold mb-2">Do you have market analysis?</h3>
-                        <p>Yes, we provide detailed market analysis, price trends, trading volumes, and technical
-                            analysis for the majority of cryptocurrencies.</p>
+                        <h3 class="font-semibold mb-2">آیا تحلیل بازار ارائه می‌دهید؟</h3>
+                        <p>بله، ما تحلیل‌های دقیق بازار، روندهای قیمت، حجم معاملات و تحلیل‌های فنی برای اکثر ارزهای
+                            دیجیتال ارائه می‌دهیم.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Technical Questions -->
+        <!-- سوالات فنی -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="technicalHeading">
                 <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#technicalCollapse" aria-expanded="false" aria-controls="technicalCollapse">
-                    Technical Questions
+                    سوالات فنی
                 </button>
             </h2>
             <div id="technicalCollapse" class="accordion-collapse collapse" aria-labelledby="technicalHeading"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
                     <div class="mb-4">
-                        <h3 class="font-semibold mb-2">What is blockchain technology?</h3>
-                        <p>Blockchain is a decentralized digital ledger that maintains a record of transactions on a
-                            network of computers. It's the technology behind most cryptocurrencies.</p>
+                        <h3 class="font-semibold mb-2">فناوری بلاکچین چیست؟</h3>
+                        <p>بلاکچین یک دفتر کل دیجیتال غیرمتمرکز است که سوابق تراکنش‌ها را در یک شبکه از کامپیوترها
+                            نگهداری می‌کند. این فناوری پشت اکثر ارزهای دیجیتال است.</p>
                     </div>
                     <div class="mb-4">
-                        <h3 class="font-semibold mb-2">What are smart contracts?</h3>
-                        <p>Smart contracts are self-executing contracts where the terms of the agreement are written
-                            directly into code. They automatically run when certain predefined conditions are fulfilled.
-                        </p>
+                        <h3 class="font-semibold mb-2">قراردادهای هوشمند چیست؟</h3>
+                        <p>قراردادهای هوشمند، قراردادهای خودکاری هستند که شرایط توافق مستقیماً در کد نوشته شده است. آنها
+                            به طور خودکار زمانی که شرایط از پیش تعیین شده خاصی برآورده شوند، اجرا می‌شوند.</p>
                     </div>
                 </div>
             </div>
@@ -232,10 +233,10 @@ questions below.{% endblock %}
 
 <div class="container text-center py-5">
     <div class="p-4">
-        <h2 class="mb-3">Still Have Questions?</h2>
-        <p class="lead mb-4"><small>Can't find what you're looking for? We can assist!</small></p>
+        <h2 class="mb-3">هنوز سوالی دارید؟</h2>
+        <p class="lead mb-4"><small>آنچه به دنبالش هستید را پیدا نمی‌کنید؟ ما می‌توانیم کمک کنیم!</small></p>
         <a href="/contact" class="btn btn-dark">
-            <i class="fas fa-envelope me-2"></i>Contact Us
+            <i class="fas fa-envelope me-2"></i>تماس با ما
         </a>
     </div>
 </div>

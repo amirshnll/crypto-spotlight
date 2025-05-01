@@ -3,7 +3,7 @@ from django.utils import timezone
 from crypto.models import Cryptocurrency
 from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
-from crypto_spotlight.slugify import generate_unique_slug
+from crypto_website.slugify import generate_unique_slug
 
 
 class NewsCategory(models.Model):

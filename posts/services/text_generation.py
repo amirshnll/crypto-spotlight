@@ -54,7 +54,14 @@ class TextGenerationService:
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
         # Handle case where type is a list
         analysis_type = type[0] if isinstance(type, list) else type
-        topic = f"{analysis_type} Market Analysis: {crypto.name} Price Movement and Trends - {current_time}"
+
+        analysis_type_display = {
+            "Hourly": "ساعتی",
+            "Daily": "روزانه",
+            "Monthly": "ماهانه",
+        }
+
+        topic = f"تحلیل بازار {analysis_type_display[analysis_type]}: روند و حرکت قیمت {crypto.name} - {current_time}"
 
         current_price = PriceData.objects.filter(cryptocurrency=crypto).last()
         if current_price:
@@ -122,33 +129,34 @@ class TextGenerationService:
         article_titles = [article.title for article in articles]
 
         # Create a structured prompt for better article organization with minimal Markdown formatting
-        prompt = f"""Write a comprehensive and well-structured news article about {topic} by Markdown format.
+        prompt = f"""یک مقاله جامع و ساختارمند خبری درباره {topic} با فرمت مارک‌داون بنویسید.
 
-        Please organize the article with the following headings:
-        1. Summary (2-3 sentences)
-        2. Market Overview
-        3. Analysis and Insights
-        4. Market Outlook
+        لطفاً مقاله را با عناوین زیر سازماندهی کنید:
+        1. خلاصه (2-3 جمله)
+        2. نمای کلی بازار
+        3. تحلیل و بینش‌ها
+        4. چشم‌انداز بازار
 
-        Instructions:
-        - The article must be between 500–800 words
-        - Write in a neutral, journalistic tone
-        - Use paragraphs and bullet points for readability
-        - Keep formatting minimal and clean
-        - Ensure proper spacing between sections
-        - Start directly with the first heading — do not add any introduction or explanations
-        - Do not include any meta comments, apologies, or extra text at the beginning or end
-        - Output must be only the article, without surrounding commentary or assistant-style notes
+        دستورالعمل‌ها:
+        - زبان مقاله حتما فارسی باشد
+        - مقاله باید بین 500 تا 800 کلمه باشد
+        - با لحنی خنثی و روزنامه‌نگارانه بنویسید
+        - از پاراگراف‌ها و نقاط گلوله‌ای برای خوانایی استفاده کنید
+        - قالب‌بندی را حداقل و تمیز نگه دارید
+        - از فاصله‌گذاری مناسب بین بخش‌ها اطمینان حاصل کنید
+        - مستقیماً با اولین عنوان شروع کنید — هیچ مقدمه یا توضیحی اضافه نکنید
+        - هیچ نظر متا، عذرخواهی یا متن اضافی در ابتدا یا انتها قرار ندهید
+        - خروجی باید فقط مقاله باشد، بدون تفسیر اطراف یا یادداشت‌های سبک دستیار
 
-        Use the following data for the article:
-        Current Price: ${current_price:.2f}
-        24h High: ${high_24h:.2f}
-        24h Low: ${low_24h:.2f}
-        24h Price Change: {price_change_percentage_24h:.2f}%
-        7d Price Change: {price_change_percentage_7d:.2f}%
-        30d Price Change: {price_change_percentage_30d:.2f}%
+        از داده‌های زیر برای مقاله استفاده کنید:
+        قیمت فعلی: ${current_price:.2f}
+        بالاترین قیمت 24 ساعته: ${high_24h:.2f}
+        پایین‌ترین قیمت 24 ساعته: ${low_24h:.2f}
+        تغییر قیمت 24 ساعته: {price_change_percentage_24h:.2f}%
+        تغییر قیمت 7 روزه: {price_change_percentage_7d:.2f}%
+        تغییر قیمت 30 روزه: {price_change_percentage_30d:.2f}%
         
-        {"Latest news related to {topic}:" if len(articles) > 0 else ""}
+        {"آخرین اخبار مرتبط با {topic}:" if len(articles) > 0 else ""}
         {"\n".join([f"- {text}" for text in article_titles])}
         """
 
@@ -171,4 +179,11 @@ class TextGenerationService:
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
         # Handle case where type is a list
         analysis_type = type[0] if isinstance(type, list) else type
-        return f"{analysis_type} Market Analysis: {crypto} Price Movement and Trends - {current_time}"
+
+        analysis_type_display = {
+            "Hourly": "ساعتی",
+            "Daily": "روزانه",
+            "Monthly": "ماهانه",
+        }
+        
+        return f"تحلیل بازار {analysis_type_display[analysis_type]}: روند و حرکت قیمت {crypto} - {current_time}"
