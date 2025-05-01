@@ -1,0 +1,51 @@
+{% if post.related_cryptocurrencies.all %}
+<div class="card mb-4">
+    <div class="card-header bg-dark text-white">
+        <h5 class="mb-0">قیمت لحظه‌ای ارزهای دیجیتال</h5>
+    </div>
+    <div class="card-body">
+        {% for crypto in post.related_cryptocurrencies.all %}
+        {% with latest_price=crypto.price_data.latest %}
+        <div class="crypto-price-item p-3 {% if not forloop.last %}border-bottom{% endif %}">
+            <a href="{{ request.scheme }}://{{ request.get_host }}/crypto/{{ crypto.slug }}"
+                class="text-decoration-none text-dark" title="{{ crypto.name }}">
+                <div class="d-flex align-items-center mb-2">
+                    {% if crypto.icon %}
+                    <img src="{{ crypto.icon.url }}" alt="{{ crypto.name }}" width="15" height="15" class="me-2">
+                    {% endif %}
+                    <h6 class="mb-0">{{ crypto.name }} ({{ crypto.symbol }})</h6>
+                </div>
+            </a>
+            <div class="price-details">
+                <div class="row g-2">
+                    <div class="col-12">
+                        <small class="text-muted">Price:</small>
+                        <span class="float-end">${{ latest_price.price_usd|floatformat:2 }}</span>
+                    </div>
+                    <div class="col-12">
+                        <small class="text-muted">Market Cap:</small>
+                        <span class="float-end">${{ latest_price.market_cap|floatformat:0 }}</span>
+                    </div>
+                    <div class="col-12">
+                        <small class="text-muted">24h Volume:</small>
+                        <span class="float-end">${{ latest_price.volume_24h|floatformat:0 }}</span>
+                    </div>
+                    <div class="col-12">
+                        <small class="text-muted">24h Change:</small>
+                        <span
+                            class="float-end {% if latest_price.change_24h >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            {{ latest_price.change_24h|floatformat:2 }}%
+                        </span>
+                    </div>
+                    <div class="col-12">
+                        <small class="text-muted">Last Updated:</small>
+                        <span class="float-end">{{ latest_price.timestamp|date:"M d, H:i" }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endwith %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

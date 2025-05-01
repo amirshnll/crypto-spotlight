@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}قیمت‌های زنده - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block meta_keywords %}قیمت‌های زنده ارزهای دیجیتال، آمار بازار ارزهای دیجیتال، قیمت‌های زنده ارزهای دیجیتال،
+{{ WEBSITE_NAME }}، قیمت‌های ارزهای دیجیتال{% endblock %}
+
+{% block meta_description %}قیمت‌های زنده ارزهای دیجیتال و آمار بازار را در {{ WEBSITE_NAME }} دریافت کنید. با
+نمودارهای لحظه‌ای و تغییرات قیمت ارزهای دیجیتال اصلی به‌روز بمانید.{% endblock %}
+
+{% block og_title %}قیمت‌های زنده - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block og_description %}قیمت‌های زنده ارزهای دیجیتال و آمار بازار را در {{ WEBSITE_NAME }} دریافت کنید. با
+نمودارهای لحظه‌ای و تغییرات قیمت ارزهای دیجیتال اصلی به‌روز بمانید.{% endblock %}
+
+{% block dc_title %}قیمت‌های زنده - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block dc_keywords %}قیمت‌های زنده ارزهای دیجیتال، آمار بازار ارزهای دیجیتال، قیمت‌های زنده ارزهای دیجیتال،
+{{ WEBSITE_NAME }}، قیمت‌های ارزهای دیجیتال{% endblock %}
+
+{% block dc_description %}قیمت‌های زنده ارزهای دیجیتال و آمار بازار را در {{ WEBSITE_NAME }} دریافت کنید. با
+نمودارهای لحظه‌ای و تغییرات قیمت ارزهای دیجیتال اصلی به‌روز بمانید.{% endblock %}
+
+{% block twitter_title %}قیمت‌های زنده - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block twitter_description %}قیمت‌های زنده ارزهای دیجیتال و آمار بازار را در {{ WEBSITE_NAME }} دریافت کنید. با
+نمودارهای لحظه‌ای و تغییرات قیمت ارزهای دیجیتال اصلی به‌روز بمانید.{% endblock %}
+
+{% block breadcrumb_items %},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "قیمت‌های زنده",
+"item": "{{ request.scheme }}://{{ request.get_host }}{% url 'live' %}"
+}
+{% endblock %}
+
+{% block extra_json_ld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "قیمت‌های زنده ارزهای دیجیتال - {{ WEBSITE_NAME }}",
+  "description": "قیمت‌های زنده ارزهای دیجیتال و آمار بازار را در {{ WEBSITE_NAME }} دریافت کنید. با نمودارهای لحظه‌ای و تغییرات قیمت ارزهای دیجیتال اصلی به‌روز بمانید.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ WEBSITE_NAME }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ request.scheme }}://{{ request.get_host }}{% load static %}{% static 'images/meta.jpg' %}"
+    }
+  },
+  "mainEntity": {
+    "@type": "Dataset",
+    "name": "داده‌های قیمت زنده ارزهای دیجیتال",
+    "description": "نمودارهای قیمت لحظه‌ای و داده‌های بازار برای ارزهای دیجیتال اصلی",
+    "temporalCoverage": "{{ prices.0.labels.0 }}/{{ prices.0.labels|last }}"
+  },
+  "url": "{{ request.scheme }}://{{ request.get_host }}{% url 'live' %}"
+}
+</script>
+{% endblock %}
+
+
+{% block content %}
+<div class="live-charts">
+    {% if prices%}
+    <div class="live-chart mt-4">
+        {% for price in prices %}
+        <a href="{{ request.scheme }}://{{ request.get_host }}/crypto/{{ price.slug }}"
+            class="text-decoration-none text-dark" title="{{ price.name }}">
+            <h4>
+                {% if price.icon %}
+                <img src="{{ price.icon.url }}" alt="{{ price.name }}" width="15" height="15"
+                    style="vertical-align: middle;">
+                {% endif %}
+                نمودار قیمت زنده {{ price.display_name }} ({{ price.symbol }})
+            </h4>
+        </a>
+        <canvas id="priceChart-{{ price.id }}" width="400" height="200"></canvas>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+
+{% block extra_js %}
+<script>
+    {% for price in prices %}
+    const ctx{{ price.id }} = document.getElementById('priceChart-{{ price.id }}').getContext('2d');
+    const priceChart{{ price.id }} = new Chart(ctx{{ price.id }}, {
+        type: 'line',
+        data: {
+            labels: {{ price.labels | safe }},
+        datasets: [{
+            label: 'قیمت به دلار',
+            data: {{ price.prices | safe }},
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+            }]
+        },
+        options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+    });
+    {% endfor %}
+</script>
+{% endblock %}

@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block title %}سوالات متداول (FAQ) - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block meta_keywords %}سوالات متداول، اخبار ارزهای دیجیتال، تحلیل ارزهای دیجیتال، دارایی‌های دیجیتال، اخبار بلاکچین،
+بینش‌های ارزهای دیجیتال، آموزش ارزهای دیجیتال، به‌روزرسانی‌های ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز
+دیجیتال{% endblock %}
+
+{% block meta_description %}
+پاسخ سوالات رایج درباره {{ WEBSITE_NAME }}، مفاهیم اساسی ارزهای دیجیتال، نحوه استفاده از وب‌سایت ما و سوالات فنی را در
+زیر بیابید.
+{% endblock %}
+
+{% block og_title %}سوالات متداول (FAQ) - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block og_description %}
+پاسخ سوالات رایج درباره {{ WEBSITE_NAME }}، مفاهیم اساسی ارزهای دیجیتال، نحوه استفاده از وب‌سایت ما و سوالات فنی را در
+زیر بیابید.
+{% endblock %}
+
+{% block dc_title %}سوالات متداول (FAQ) - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block dc_keywords %}سوالات متداول، اخبار ارزهای دیجیتال، تحلیل ارزهای دیجیتال، دارایی‌های دیجیتال، اخبار بلاکچین،
+بینش‌های ارزهای دیجیتال، آموزش ارزهای دیجیتال، به‌روزرسانی‌های ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز
+دیجیتال{% endblock %}
+
+{% block dc_description %}
+پاسخ سوالات رایج درباره {{ WEBSITE_NAME }}، مفاهیم اساسی ارزهای دیجیتال، نحوه استفاده از وب‌سایت ما و سوالات فنی را در
+زیر بیابید.{% endblock %}
+
+{% block twitter_title %}سوالات متداول (FAQ) - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block breadcrumb_items %},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "سوالات متداول (FAQ)",
+"item": "{{ request.scheme }}://{{ request.get_host }}{% url 'faq' %}"
+}
+{% endblock %}
+
+{% block content %}
+
+{% block extra_json_ld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+  {
+    "@type": "Question",
+    "name": "{{ WEBSITE_NAME }} چیست؟",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "{{ WEBSITE_NAME }} یک وب‌سایت عمومی اخبار و تحلیل ارزهای دیجیتال است که اطلاعات جدید، تحلیل بازار و منابع آموزشی را در اکوسیستم ارزهای دیجیتال ارائه می‌دهد."
+    }
+  },
+  {
+      "@type": "Question",
+      "name": "محتوا چند وقت یکبار به‌روزرسانی می‌شود؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ما محتوا را به صورت روزانه به‌روزرسانی می‌کنیم تا اخبار فعلی، تحلیل بازار و رویدادهای اخیر در ارزهای دیجیتال را پوشش دهیم. این به شما کمک می‌کند تا از آنچه در دنیای به سرعت در حال تغییر ارزهای دیجیتال رخ می‌دهد، مطلع باشید."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ارز دیجیتال چیست؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ارز دیجیتال یک ارز دیجیتال یا مجازی است که توسط رمزنگاری ایمن شده است. این ارزها بر روی شبکه‌های غیرمتمرکز مبتنی بر فناوری بلاکچین فعالیت می‌کنند."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "چگونه در ارزهای دیجیتال سرمایه‌گذاری کنم؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "برای سرمایه‌گذاری در ارزهای دیجیتال، ابتدا باید یک صرافی ارز دیجیتال قابل اعتماد انتخاب کنید، یک حساب کاربری ایجاد کنید، تأیید هویت شوید و سپس پول واریز کنید. ما توصیه می‌کنیم قبل از سرمایه‌گذاری در هر محصولی، تحقیقات گسترده‌ای انجام دهید."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "چگونه می‌توانم از آخرین اخبار مطلع شوم؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "شما می‌توانید با بازدید منظم از صفحه اصلی ما، اشتراک در خبرنامه ما و دنبال کردن ما در شبکه‌های اجتماعی برای به‌روزرسانی‌های لحظه‌ای، خود را به‌روز نگه دارید."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "آیا تحلیل بازار ارائه می‌دهید؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "بله، ما تحلیل‌های دقیق بازار، روندهای قیمت، حجم معاملات و تحلیل‌های فنی برای اکثر ارزهای دیجیتال ارائه می‌دهیم."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "فناوری بلاکچین چیست؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "بلاکچین یک دفتر کل دیجیتال غیرمتمرکز است که سوابق تراکنش‌ها را در یک شبکه از کامپیوترها نگهداری می‌کند. این فناوری پشت اکثر ارزهای دیجیتال است."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "قراردادهای هوشمند چیست؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "قراردادهای هوشمند، قراردادهای خودکاری هستند که شرایط توافق مستقیماً در کد نوشته شده است. آنها به طور خودکار زمانی که شرایط از پیش تعیین شده خاصی برآورده شوند، اجرا می‌شوند."
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+<div class="container py-5">
+    <h1 class="display-4 text-center mb-4">سوالات متداول</h1>
+    <p class="text-muted text-center">
+        <small>
+            پاسخ سوالات رایج درباره {{ WEBSITE_NAME }}، مفاهیم اساسی ارزهای دیجیتال، نحوه استفاده از سایت ما و سوالات
+            فنی را در زیر بیابید.
+        </small>
+    </p>
+</div>
+
+<div class="container mx-auto px-4 py-8">
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item border-secondary">
+            <h2 class="accordion-header" id="faqsHeading">
+                <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqsCollapse" aria-expanded="true" aria-controls="faqsCollapse">
+                    نمای کلی {{ WEBSITE_NAME }}
+                </button>
+            </h2>
+            <div id="faqsCollapse" class="accordion-collapse collapse show" aria-labelledby="faqsHeading"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="mb-4">
+                        <h3 class="font-semibold mb-2">{{ WEBSITE_NAME }} چیست؟</h3>
+                        <p>{{ WEBSITE_NAME }} یک وب‌سایت عمومی اخبار و تحلیل ارزهای دیجیتال است که اطلاعات جدید، تحلیل
+                            بازار و منابع آموزشی را در اکوسیستم ارزهای دیجیتال ارائه می‌دهد.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="font-semibold mb-2">محتوا چند وقت یکبار به‌روزرسانی می‌شود؟</h3>
+                        <p>ما محتوا را به صورت روزانه به‌روزرسانی می‌کنیم تا اخبار فعلی، تحلیل بازار و رویدادهای اخیر در
+                            ارزهای دیجیتال را پوشش دهیم. این به شما کمک می‌کند تا از آنچه در دنیای به سرعت در حال تغییر
+                            ارزهای دیجیتال رخ می‌دهد، مطلع باشید.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- مفاهیم اساسی ارزهای دیجیتال -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="cryptoBasicsHeading">
+                <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#cryptoBasicsCollapse" aria-expanded="false" aria-controls="cryptoBasicsCollapse">
+                    مفاهیم اساسی ارزهای دیجیتال
+                </button>
+            </h2>
+            <div id="cryptoBasicsCollapse" class="accordion-collapse collapse" aria-labelledby="cryptoBasicsHeading"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="mb-4">
+                        <h3 class="font-semibold mb-2">ارز دیجیتال چیست؟</h3>
+                        <p>ارز دیجیتال یک ارز دیجیتال یا مجازی است که توسط رمزنگاری ایمن شده است. این ارزها بر روی
+                            شبکه‌های غیرمتمرکز مبتنی بر فناوری بلاکچین فعالیت می‌کنند.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="font-semibold mb-2">چگونه در ارزهای دیجیتال سرمایه‌گذاری کنم؟</h3>
+                        <p>برای سرمایه‌گذاری در ارزهای دیجیتال، ابتدا باید یک صرافی ارز دیجیتال قابل اعتماد انتخاب کنید،
+                            یک حساب کاربری ایجاد کنید، تأیید هویت شوید و سپس پول واریز کنید. ما توصیه می‌کنیم قبل از
+                            سرمایه‌گذاری در هر محصولی، تحقیقات گسترده‌ای انجام دهید.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- استفاده از پلتفرم ما -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="platformHeading">
+                <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#platformCollapse" aria-expanded="false" aria-controls="platformCollapse">
+                    استفاده از پلتفرم ما
+                </button>
+            </h2>
+            <div id="platformCollapse" class="accordion-collapse collapse" aria-labelledby="platformHeading"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="mb-4">
+                        <h3 class="font-semibold mb-2">چگونه می‌توانم از آخرین اخبار مطلع شوم؟</h3>
+                        <p>شما می‌توانید با بازدید منظم از صفحه اصلی ما، اشتراک در خبرنامه ما و دنبال کردن ما در
+                            شبکه‌های اجتماعی برای به‌روزرسانی‌های لحظه‌ای، خود را به‌روز نگه دارید.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="font-semibold mb-2">آیا تحلیل بازار ارائه می‌دهید؟</h3>
+                        <p>بله، ما تحلیل‌های دقیق بازار، روندهای قیمت، حجم معاملات و تحلیل‌های فنی برای اکثر ارزهای
+                            دیجیتال ارائه می‌دهیم.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- سوالات فنی -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="technicalHeading">
+                <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#technicalCollapse" aria-expanded="false" aria-controls="technicalCollapse">
+                    سوالات فنی
+                </button>
+            </h2>
+            <div id="technicalCollapse" class="accordion-collapse collapse" aria-labelledby="technicalHeading"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <div class="mb-4">
+                        <h3 class="font-semibold mb-2">فناوری بلاکچین چیست؟</h3>
+                        <p>بلاکچین یک دفتر کل دیجیتال غیرمتمرکز است که سوابق تراکنش‌ها را در یک شبکه از کامپیوترها
+                            نگهداری می‌کند. این فناوری پشت اکثر ارزهای دیجیتال است.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="font-semibold mb-2">قراردادهای هوشمند چیست؟</h3>
+                        <p>قراردادهای هوشمند، قراردادهای خودکاری هستند که شرایط توافق مستقیماً در کد نوشته شده است. آنها
+                            به طور خودکار زمانی که شرایط از پیش تعیین شده خاصی برآورده شوند، اجرا می‌شوند.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center py-5">
+    <div class="p-4">
+        <h2 class="mb-3">هنوز سوالی دارید؟</h2>
+        <p class="lead mb-4"><small>آنچه به دنبالش هستید را پیدا نمی‌کنید؟ ما می‌توانیم کمک کنیم!</small></p>
+        <a href="/contact" class="btn btn-dark">
+            <i class="fas fa-envelope me-2"></i>تماس با ما
+        </a>
+    </div>
+</div>
+{% endblock %}

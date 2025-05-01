@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}صفحه اصلی - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block meta_keywords %}اخبار ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز دیجیتال، {{ WEBSITE_NAME }}، آخرین
+اخبار ارزهای دیجیتال{% endblock %}
+
+{% block meta_description %}آخرین اخبار ارزهای دیجیتال و اخبار بازار را در {{ WEBSITE_NAME }} دریافت کنید. گزارش‌های
+لحظه‌ای، تحلیل و پوشش عمیق بازار ارزهای دیجیتال.{% endblock %}
+
+{% block og_title %}صفحه اصلی - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block og_description %}آخرین اخبار ارزهای دیجیتال و اخبار بازار را در {{ WEBSITE_NAME }} دریافت کنید. گزارش‌های
+لحظه‌ای، تحلیل و پوشش عمیق بازار ارزهای دیجیتال.{% endblock %}
+
+{% block dc_title %}صفحه اصلی - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block dc_keywords %}اخبار ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز دیجیتال، {{ WEBSITE_NAME }}، آخرین
+اخبار ارزهای دیجیتال{% endblock %}
+
+{% block dc_description %}آخرین اخبار ارزهای دیجیتال و اخبار بازار را در {{ WEBSITE_NAME }} دریافت کنید. گزارش‌های
+لحظه‌ای، تحلیل و پوشش عمیق بازار ارزهای دیجیتال.{% endblock %}
+
+{% block twitter_title %}صفحه اصلی - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block twitter_description %}آخرین اخبار ارزهای دیجیتال و اخبار بازار را در {{ WEBSITE_NAME }} دریافت کنید. گزارش‌های
+لحظه‌ای، تحلیل و پوشش عمیق بازار ارزهای دیجیتال.{% endblock %}
+
+{% block extra_json_ld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ WEBSITE_NAME }} - اخبار و تحلیل بازار ارزهای دیجیتال",
+  "description": "آخرین اخبار ارزهای دیجیتال و اخبار بازار را در {{ WEBSITE_NAME }} دریافت کنید. گزارش‌های لحظه‌ای، تحلیل و پوشش عمیق بازار ارزهای دیجیتال.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ WEBSITE_NAME }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ request.scheme }}://{{ request.get_host }}{% load static %}{% static 'images/meta.jpg' %}"
+    }
+  },
+  "url": "{{ request.scheme }}://{{ request.get_host }}{% url 'home' %}"
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="home-container">
+    {% for category in categories %}
+    <div class="row">
+        <a href="{{ request.scheme }}://{{ request.get_host }}/category/{{ category.slug }}"
+            class="text-decoration-none text-dark" title="{{ category.name }}">
+            <h2>{{ category.name }}</h2>
+        </a>
+        <div class="row">
+            {% for post in category.posts %}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="card post-card h-100">
+                    <a href="{% url 'post_detail' post.slug %}" class="text-decoration-none" title="{{ post.title }}">
+                        <div class="card-body">
+                            {% if post.featured_image %}
+                            <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.title }}"
+                                title="{{ post.title }}" title="{{ post.title }}">
+                            {% else %}
+                            {% load static %}
+                            <img src="{% static '/images/default.webp' %}" class="card-img-top" alt="{{ post.title }}"
+                                title="{{ post.title }}" title="{{ post.title }}">
+                            {% endif %}
+                            <h3 class="card-title">{{ post.title }}</h3>
+                            <p>{{ post.content|striptags|truncatewords:30 }}</p>
+                            <p class="card-text text-muted">
+                                <small>
+                                    <i class="far fa-calendar-alt"></i> {{ post.published_at|date:"F d, Y" }}
+                                    &nbsp;
+                                    <i class="fas fa-eye"></i> {{ post.views_count }} بازدید
+                                </small>
+                            </p>
+                            <a href="{% url 'post_detail' post.slug %}"
+                                class="text-blue-600 hover:text-blue-800 text-decoration-none">ادامه مطلب
+                                ←</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

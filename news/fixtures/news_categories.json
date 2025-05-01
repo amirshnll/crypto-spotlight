@@ -1,0 +1,222 @@
+[
+    {
+        "model": "news.newscategory",
+        "pk": 1,
+        "fields": {
+            "name": "تحلیل بازار",
+            "slug": "market-analysis",
+            "description": "تحلیل عمیق بازارهای ارز دیجیتال، حرکت‌های قیمت، روندها و بینش‌های معاملاتی",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 2,
+        "fields": {
+            "name": "فناوری بلاکچین",
+            "slug": "blockchain-technology",
+            "description": "آخرین تحولات در فناوری بلاکچین، پروتکل‌ها و زیرساخت‌ها",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 3,
+        "fields": {
+            "name": "امور مالی غیرمتمرکز",
+            "slug": "defi",
+            "description": "اخبار امور مالی غیرمتمرکز، پروتکل‌ها، بازده‌ها و پلتفرم‌های وام‌دهی",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 4,
+        "fields": {
+            "name": "توکن‌های غیرمثلی",
+            "slug": "nfts",
+            "description": "توکن‌های غیرمثلی، هنر دیجیتال، کلکسیونی‌ها و بازارهای NFT",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 5,
+        "fields": {
+            "name": "قوانین و مقررات",
+            "slug": "regulation",
+            "description": "مقررات ارزهای دیجیتال، سیاست‌ها و تحولات حقوقی در سراسر جهان",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 6,
+        "fields": {
+            "name": "استخراج",
+            "slug": "mining",
+            "description": "عملیات استخراج ارزهای دیجیتال، سخت‌افزار و پایداری",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 7,
+        "fields": {
+            "name": "صرافی‌ها",
+            "slug": "exchanges",
+            "description": "صرافی‌های ارز دیجیتال، پلتفرم‌های معاملاتی و زیرساخت‌های بازار",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 8,
+        "fields": {
+            "name": "امنیت",
+            "slug": "security",
+            "description": "امنیت سایبری، هک‌ها، کلاهبرداری‌ها و بهترین شیوه‌های امنیتی در حوزه ارزهای دیجیتال",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 9,
+        "fields": {
+            "name": "پذیرش",
+            "slug": "adoption",
+            "description": "پذیرش گسترده ارزهای دیجیتال و فناوری بلاکچین",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 10,
+        "fields": {
+            "name": "آلت‌کوین‌ها",
+            "slug": "altcoins",
+            "description": "ارزهای دیجیتال جایگزین، توکن‌ها و دارایی‌های دیجیتال نوظهور",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 11,
+        "fields": {
+            "name": "وب۳",
+            "slug": "web3",
+            "description": "وب غیرمتمرکز، برنامه‌های غیرمتمرکز و توسعه زیرساخت وب۳",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 12,
+        "fields": {
+            "name": "متاورس",
+            "slug": "metaverse",
+            "description": "دنیاهای مجازی، املاک دیجیتال و پروژه‌های متاورس",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 13,
+        "fields": {
+            "name": "بازی‌ها",
+            "slug": "gaming",
+            "description": "بازی‌های بلاکچینی، بازی برای کسب درآمد و تحولات گیم‌فای",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 14,
+        "fields": {
+            "name": "سرمایه‌گذاری",
+            "slug": "investment",
+            "description": "استراتژی‌های سرمایه‌گذاری ارزهای دیجیتال، پذیرش نهادی و تأمین مالی",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 15,
+        "fields": {
+            "name": "نوآوری",
+            "slug": "innovation",
+            "description": "فناوری‌های پیشرفته، تحقیقات و نوآوری در فضای ارزهای دیجیتال",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 16,
+        "fields": {
+            "name": "حریم خصوصی",
+            "slug": "privacy",
+            "description": "ارزهای حریم خصوصی، پروتکل‌ها و حفاظت از داده‌ها در بلاکچین",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 17,
+        "fields": {
+            "name": "لایه ۲",
+            "slug": "layer-2",
+            "description": "راه‌حل‌های مقیاس‌پذیری لایه ۲، زنجیره‌های جانبی و بهینه‌سازی شبکه",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 18,
+        "fields": {
+            "name": "استیبل‌کوین‌ها",
+            "slug": "stablecoins",
+            "description": "تحولات استیبل‌کوین‌ها، مقررات و تأثیر بر بازار",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 19,
+        "fields": {
+            "name": "سازمانی",
+            "slug": "enterprise",
+            "description": "راه‌حل‌های بلاکچین سازمانی و پذیرش شرکتی",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 20,
+        "fields": {
+            "name": "پایداری",
+            "slug": "sustainability",
+            "description": "تأثیر زیست‌محیطی، ابتکارات سبز و بلاکچین پایدار",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 21,
+        "fields": {
+            "name": "جهانی",
+            "slug": "global",
+            "description": "روندها، رویدادها و تحولات جهانی ارزهای دیجیتال",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "news.newscategory",
+        "pk": 22,
+        "fields": {
+            "name": "دسته‌بندی نشده",
+            "slug": "uncategorized",
+            "description": "مقالات خبری بدون دسته‌بندی خاص",
+            "created_at": "2025-01-01T00:00:00Z"
+        }
+    }
+]

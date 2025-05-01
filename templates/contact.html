@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}تماس با ما - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block meta_keywords %}تماس با ما، اخبار ارزهای دیجیتال، تحلیل ارزهای دیجیتال، دارایی‌های دیجیتال، اخبار بلاکچین، بینش‌های ارزهای دیجیتال، آموزش ارزهای دیجیتال، به‌روزرسانی‌های ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز دیجیتال{% endblock %}
+
+{% block meta_description %}
+با {{ WEBSITE_NAME }} تماس بگیرید، منبع مورد اعتماد شما برای اخبار، تحلیل و بینش‌های ارزهای دیجیتال. ما گزارش‌های دقیق، به موقع و محتوای آموزشی در دنیای دارایی‌های دیجیتال ارائه می‌دهیم.
+{% endblock %}
+
+{% block og_title %}تماس با ما - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block og_description %}
+با {{ WEBSITE_NAME }} تماس بگیرید، منبع مورد اعتماد شما برای اخبار، تحلیل و بینش‌های ارزهای دیجیتال. ما گزارش‌های دقیق، به موقع و محتوای آموزشی در دنیای دارایی‌های دیجیتال ارائه می‌دهیم.
+{% endblock %}
+
+{% block dc_title %}تماس با ما - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block dc_keywords %}تماس با ما، اخبار ارزهای دیجیتال، تحلیل ارزهای دیجیتال، دارایی‌های دیجیتال، اخبار بلاکچین، بینش‌های ارزهای دیجیتال، آموزش ارزهای دیجیتال، به‌روزرسانی‌های ارزهای دیجیتال، اخبار بازار ارزهای دیجیتال، اخبار ارز دیجیتال{% endblock %}
+
+{% block dc_description %}
+با {{ WEBSITE_NAME }} تماس بگیرید، منبع مورد اعتماد شما برای اخبار، تحلیل و بینش‌های ارزهای دیجیتال. ما گزارش‌های دقیق، به موقع و محتوای آموزشی در دنیای دارایی‌های دیجیتال ارائه می‌دهیم.{% endblock %}
+
+{% block twitter_title %}تماس با ما - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block twitter_description %}با {{ WEBSITE_NAME }} تماس بگیرید، منبع مورد اعتماد شما برای اخبار، تحلیل و بینش‌های ارزهای دیجیتال. ما گزارش‌های دقیق، به موقع و محتوای آموزشی در دنیای دارایی‌های دیجیتال ارائه می‌دهیم.{% endblock %}
+
+{% block breadcrumb_items %},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "تماس با ما",
+"item": "{{ request.scheme }}://{{ request.get_host }}{% url 'contact' %}"
+}
+{% endblock %}
+
+{% block extra_json_ld %}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "{{ WEBSITE_NAME }}",
+            "url": "{{ request.scheme }}://{{ request.get_host }}",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "hi@{{ WEBSITE_DOMAIN }}",
+                "contactType": "پشتیبانی مشتری",
+                "availableLanguage": ["فارسی"]
+            },
+            "sameAs": [
+                "{{ WEBSITE_TWITTER }}",
+                "{{ WEBSITE_LINKEDIN }}"
+            ]
+        }
+    }
+</script>
+{% endblock %}
+
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="display-4 text-center mb-4">تماس با ما</h1>
+    <p class="text-muted text-center">
+        <small>
+            سوال یا نظری دارید؟ ما مشتاقانه منتظر شنیدن آن هستیم. فرم زیر را پر کنید و ما در اسرع وقت با شما تماس خواهیم گرفت.
+        </small>
+    </p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                {% include "forms/contact_form.html" %}
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h5 mb-3">ایمیل ما</h3>
+                        <p class="text-muted">hi@{{ WEBSITE_DOMAIN }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h5 mb-3">ما را در شبکه‌های اجتماعی دنبال کنید</h3>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="{{ WEBSITE_TWITTER }}" class="text-dark me-3"><i class="fab fa-x fa-lg"
+                                    title="حساب رسمی توییتر ما" rel="nofollow noreferrer noopener"></i></a>
+                            <a href="{{ WEBSITE_LINKEDIN }}" class="text-dark me-3"><i class="fab fa-linkedin fa-lg"
+                                    title="حساب رسمی لینکدین ما" rel="nofollow noreferrer noopener"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+<form method="post" action="{% url 'submit_contact' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="name" class="form-label">نام <sup class="text-danger">*</sup></label>
+        <input type="text" name="name" id="name" class="form-control" maxlength="100" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">ایمیل <sup class="text-danger">*</sup></label>
+        <input type="email" name="email" id="email" class="form-control" maxlength="500" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="subject" class="form-label">موضوع <sup class="text-danger">*</sup></label>
+        <input type="text" name="subject" id="subject" class="form-control" maxlength="200" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="message" class="form-label">پیام <sup class="text-danger">*</sup></label>
+        <textarea name="message" id="message" rows="4" class="form-control" maxlength="1000" required></textarea>
+    </div>
+
+    <div class="text-end">
+        <button type="submit" class="btn btn-dark">
+            <i class="fas fa-paper-plane me-2"></i>ارسال پیام
+        </button>
+    </div>
+
+    <div class="mb-3 mt-2">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{% if message.tags == 'success' %}success{% else %}danger{% endif %} alert-dismissible fade show"
+            role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</form>

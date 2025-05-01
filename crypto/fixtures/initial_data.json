@@ -1,0 +1,227 @@
+[
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 1,
+    "fields": {
+      "name": "Bitcoin",
+      "display_name": "بیت‌کوین",
+      "slug": "bitcoin",
+      "symbol": "BTC",
+      "description": "بیت‌کوین اولین ارز دیجیتال غیرمتمرکز است که بر اساس شبکه همتا به همتا و فناوری بلاکچین ساخته شده است. در سال 2009 توسط فرد یا گروهی ناشناس با نام مستعار ساتوشی ناکاموتو ایجاد شد.",
+      "website": "https://bitcoin.org",
+      "whitepaper": "https://bitcoin.org/bitcoin.pdf",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 2,
+    "fields": {
+      "name": "Ethereum",
+      "display_name": "اتریوم",
+      "slug": "ethereum",
+      "symbol": "ETH",
+      "description": "اتریوم یک پلتفرم غیرمتمرکز است که امکان ایجاد قراردادهای هوشمند و برنامه‌های غیرمتمرکز (DApps) را فراهم می‌کند. این پلتفرم در سال 2013 توسط ویتالیک بوترین پیشنهاد و در سال 2015 راه‌اندازی شد.",
+      "website": "https://ethereum.org",
+      "whitepaper": "https://ethereum.org/whitepaper",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 3,
+    "fields": {
+      "name": "Dogecoin",
+      "display_name": "دوج‌کوین",
+      "slug": "dogecoin",
+      "symbol": "DOGE",
+      "description": "دوج‌کوین یک ارز دیجیتال است که توسط گروهی از افراد علاقه‌مند به ایجاد ارزی سرگرم‌کننده‌تر از ارزهای دیجیتال سنتی ساخته شد. این ارز در سال 2013 راه‌اندازی شد و از آن زمان به یک ارز دیجیتال محبوب تبدیل شده است.",
+      "website": "https://dogecoin.com",
+      "whitepaper": "https://dogecoin.com/dogepedia/",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 4,
+    "fields": {
+      "name": "Solana",
+      "display_name": "سولانا",
+      "slug": "solana",
+      "symbol": "SOL",
+      "description": "سولانا یک بلاکچین با کارایی بالا است که از سازندگان در سراسر جهان برای ایجاد برنامه‌های ارز دیجیتال مقیاس‌پذیر پشتیبانی می‌کند. این پلتفرم به سرعت تراکنش بالا و هزینه‌های پایین خود شناخته شده است.",
+      "website": "https://solana.com",
+      "whitepaper": "https://solana.com/solana-whitepaper.pdf",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 5,
+    "fields": {
+      "name": "Cardano",
+      "display_name": "کاردانو",
+      "slug": "cardano",
+      "symbol": "ADA",
+      "description": "کاردانو یک پلتفرم بلاکچین مبتنی بر اثبات سهام است که هدف آن کمک به 'تغییردهندگان، نوآوران و آینده‌نگران' برای ایجاد تغییرات مثبت جهانی است. این پلتفرم توسط چارلز هاسکینسون، یکی از بنیانگذاران اتریوم، تأسیس شده است.",
+      "website": "https://cardano.org",
+      "whitepaper": "https://docs.cardano.org/en/latest/",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 6,
+    "fields": {
+      "name": "Ripple",
+      "display_name": "ریپل",
+      "slug": "ripple",
+      "symbol": "XRP",
+      "description": "XRP ارز دیجیتال بومی XRP Ledger است، یک بلاکچین طراحی شده برای تسهیل انتقال پول بین‌المللی سریع و کم‌هزینه، به ویژه برای بانک‌ها و ارائه‌دهندگان پرداخت.",
+      "website": "https://ripple.com",
+      "whitepaper": "https://ripple.com/files/ripple_consensus_whitepaper.pdf",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 7,
+    "fields": {
+      "name": "Polkadot",
+      "display_name": "پولکادات",
+      "slug": "polkadot",
+      "symbol": "DOT",
+      "description": "پولکادات یک پروتکل بلاکچین نسل بعدی است که بلاکچین‌های تخصصی متعدد را در یک شبکه یکپارچه متصل می‌کند. این پروژه توسط دکتر گوین وود، یکی از بنیانگذاران اتریوم، تأسیس شده است.",
+      "website": "https://polkadot.network",
+      "whitepaper": "https://polkadot.network/PolkaDotPaper.pdf",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 8,
+    "fields": {
+      "name": "Chainlink",
+      "display_name": "چین‌لینک",
+      "slug": "chainlink",
+      "symbol": "LINK",
+      "description": "چین‌لینک یک شبکه اوراکل غیرمتمرکز است که داده‌های دنیای واقعی را برای قراردادهای هوشمند در بلاکچین فراهم می‌کند. این پلتفرم به قراردادهای هوشمند امکان می‌دهد تا به طور امن با منابع داده خارجی، رویدادها و سیستم‌های پرداخت تعامل داشته باشند.",
+      "website": "https://chain.link",
+      "whitepaper": "https://link.smartcontract.com/whitepaper",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 9,
+    "fields": {
+      "name": "Litecoin",
+      "display_name": "لایت‌کوین",
+      "slug": "litecoin",
+      "symbol": "LTC",
+      "description": "لایت‌کوین یک ارز دیجیتال همتا به همتا است که توسط چارلی لی ایجاد شده است. این ارز بر اساس پروتکل بیت‌کوین ساخته شده اما در الگوریتم هش استفاده شده، سقف نهایی، زمان تراکنش بلوک و چند عامل دیگر متفاوت است.",
+      "website": "https://litecoin.org",
+      "whitepaper": "https://litecoin.info/index.php/Litecoin",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 10,
+    "fields": {
+      "name": "Uniswap",
+      "display_name": "یونی‌سواپ",
+      "slug": "uniswap",
+      "symbol": "UNI",
+      "description": "یونی‌سواپ یک پروتکل معاملاتی غیرمتمرکز محبوب است که به خاطر نقش خود در تسهیل معاملات خودکار توکن‌های امور مالی غیرمتمرکز (DeFi) شناخته شده است. این پلتفرم واسطه‌های مورد اعتماد و اشکال غیرضروری استخراج اجاره را حذف می‌کند.",
+      "website": "https://uniswap.org",
+      "whitepaper": "https://uniswap.org/whitepaper.pdf",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 11,
+    "fields": {
+      "name": "Stellar",
+      "display_name": "استلار",
+      "slug": "stellar",
+      "symbol": "XLM",
+      "description": "استلار یک شبکه باز برای ذخیره و انتقال پول است. این پلتفرم به کاربران امکان می‌دهد نمایش‌های دیجیتالی از تمام اشکال پول را ایجاد، ارسال و معامله کنند—دلار، پزو، بیت‌کوین، تقریباً هر چیزی.",
+      "website": "https://www.stellar.org",
+      "whitepaper": "https://www.stellar.org/papers/stellar-consensus-protocol.pdf",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 12,
+    "fields": {
+      "name": "Tether",
+      "display_name": "تتر",
+      "slug": "tether",
+      "symbol": "USDT",
+      "description": "تتر یک استیبل‌کوین متصل به دلار آمریکا است که به افراد یک جایگزین باثبات برای نوسانات بالای اکثر ارزهای دیجیتال ارائه می‌دهد. هر توکن USDT با یک دلار آمریکا که در ذخیره نگهداری می‌شود، پشتیبانی می‌شود.",
+      "website": "https://tether.to",
+      "whitepaper": "https://tether.to/wp-content/uploads/2016/06/TetherWhitePaper.pdf",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 13,
+    "fields": {
+      "name": "Cosmos",
+      "display_name": "کازموس",
+      "slug": "cosmos",
+      "symbol": "ATOM",
+      "description": "کازموس یک شبکه غیرمتمرکز از بلاکچین‌های موازی مستقل است که هر کدام توسط الگوریتم‌های اجماع BFT مانند Tendermint قدرت می‌گیرند. هدف آن ایجاد 'اینترنت بلاکچین‌ها' است که به بلاکچین‌های مختلف امکان می‌دهد با یکدیگر تراکنش داشته باشند.",
+      "website": "https://cosmos.network",
+      "whitepaper": "https://cosmos.network/resources/whitepaper",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 14,
+    "fields": {
+      "name": "Aave",
+      "display_name": "آوه",
+      "slug": "aave",
+      "symbol": "AAVE",
+      "description": "آوه یک پروتکل نقدینگی غیرمتمرکز غیرامانی است که در آن کاربران می‌توانند به عنوان سپرده‌گذار یا وام‌گیرنده مشارکت کنند. سپرده‌گذاران نقدینگی را برای بازار فراهم می‌کنند تا درآمد غیرفعال کسب کنند، در حالی که وام‌گیرندگان می‌توانند به صورت بیش‌وثیقه‌ای یا کم‌وثیقه‌ای وام بگیرند.",
+      "website": "https://aave.com",
+      "whitepaper": "https://github.com/aave/aave-protocol/blob/master/docs/Aave_Protocol_Whitepaper_v1_0.pdf",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "crypto.cryptocurrency",
+    "pk": 15,
+    "fields": {
+      "name": "Algorand",
+      "display_name": "الگوراند",
+      "slug": "algorand",
+      "symbol": "ALGO",
+      "description": "الگوراند یک شبکه خودپایدار، غیرمتمرکز و مبتنی بر بلاکچین است که از طیف گسترده‌ای از برنامه‌ها پشتیبانی می‌کند. این سیستم‌ها امن، مقیاس‌پذیر و کارآمد هستند، همه ویژگی‌های مهمی برای برنامه‌های مؤثر در دنیای واقعی.",
+      "website": "https://www.algorand.com",
+      "whitepaper": "https://www.algorand.com/technology/white-papers",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  }
+]

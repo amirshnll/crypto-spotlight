@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>فید RSS {{ WEBSITE_NAME }}</title>
+        <link>https://{{ WEBSITE_DOMAIN }}/rss/</link>
+        <description>مکان مورد اعتماد شما برای اخبار لحظه‌ای و تحلیل دنیای ارزهای دیجیتال.</description>
+        {% for post in posts %} <item>
+            <title>{{ post.title }}</title>
+            <link>https://{{ WEBSITE_DOMAIN }}.com/post/{{ post.slug }}</link>
+            <description>{{ post.content|striptags|truncatechars:500 }}</description>
+            <pubDate>{{ post.published_at|date:"r" }}</pubDate>
+        </item> {% endfor %} </channel>
+</rss>

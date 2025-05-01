@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}404 صفحه یافت نشد - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block meta_keywords %}404، صفحه یافت نشد، صفحه خطا، {{ WEBSITE_NAME }}{% endblock %}
+
+{% block meta_description %}صفحه‌ای که به دنبال آن بودید در {{ WEBSITE_NAME }} وجود ندارد. احتمالاً آدرس اشتباه است یا می‌توانید به صفحه اصلی ما بازگردید.{% endblock %}
+
+{% block og_title %}404 صفحه یافت نشد - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block og_description %}صفحه‌ای که به دنبال آن بودید در {{ WEBSITE_NAME }} وجود ندارد. احتمالاً آدرس اشتباه است یا می‌توانید به صفحه اصلی ما بازگردید.{% endblock %}
+
+{% block dc_title %}404 صفحه یافت نشد - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block dc_keywords %}404، صفحه یافت نشد، صفحه خطا، {{ WEBSITE_NAME }}{% endblock %}
+
+{% block dc_description %}صفحه‌ای که به دنبال آن بودید در {{ WEBSITE_NAME }} وجود ندارد. احتمالاً آدرس اشتباه است یا می‌توانید به صفحه اصلی ما بازگردید.{% endblock %}
+
+{% block twitter_title %}404 صفحه یافت نشد - {{ WEBSITE_NAME }}{% endblock %}
+
+{% block twitter_description %}صفحه‌ای که به دنبال آن بودید در {{ WEBSITE_NAME }} وجود ندارد. احتمالاً آدرس اشتباه است یا می‌توانید به صفحه اصلی ما بازگردید.{% endblock %}
+
+{% block breadcrumb_items %},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "404 صفحه یافت نشد",
+"item": "{{ request.scheme }}://{{ request.get_host }}{{ request.path }}"
+}
+{% endblock %}
+
+{% block extra_json_ld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "404 صفحه یافت نشد - {{ WEBSITE_NAME }}",
+  "description": "صفحه‌ای که به دنبال آن بودید در {{ WEBSITE_NAME }} وجود ندارد. احتمالاً آدرس اشتباه است یا می‌توانید به صفحه اصلی ما بازگردید.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ WEBSITE_NAME }}",
+    "url": "{{ request.scheme }}://{{ request.get_host }}"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "{{ WEBSITE_NAME }}",
+        "item": "{{ request.scheme }}://{{ request.get_host }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "404 صفحه یافت نشد",
+        "item": "{{ request.scheme }}://{{ request.get_host }}{{ request.path }}"
+      }
+    ]
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="not-found-content">
+  <div class="container">
+    <h1>404 - صفحه یافت نشد</h1>
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" fill="#ccc">
+      <circle cx="100" cy="100" r="80" stroke="black" stroke-width="5" fill="none" />
+      <line x1="60" y1="60" x2="140" y2="140" stroke="black" stroke-width="5" />
+      <line x1="140" y1="60" x2="60" y2="140" stroke="black" stroke-width="5" />
+    </svg>
+    <h2>اوپس!</h2>
+    <p>متأسفیم، صفحه‌ای که به دنبال آن هستید وجود ندارد.</p>
+    <p>&nbsp;</p>
+    <p>
+      <a href="{% url 'home' %}" class="btn btn-primary" title="رفتن به صفحه اصلی"><i class="fa fa-lg fa-arrow-left"></i> رفتن به صفحه اصلی</a>
+    </p>
+  </div>
+</div>
+
+{% endblock %}
